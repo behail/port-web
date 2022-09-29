@@ -1,20 +1,46 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import TheLandingPage from "./pages/TheLandingPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: TheLandingPage,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/contact",
+    name: "contact",
+    //Lazy Loading Routes
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "contact" */ "./pages/TheContactMePage.vue"),
+  },
+  {
+    path: "/education",
+    name: "education",
+    component: () =>
+      import(/* webpackChunkName: "education"*/ "./pages/TheEducationPage.vue"),
+  },
+  {
+    path: "/experience",
+    name: "experience",
+    component: () =>
+      import(
+        /* webpackChunkName: "experience"*/ "./pages/TheExperiencePage.vue"
+      ),
+  },
+  {
+    path: "/skills",
+    name: "skills",
+    component: () =>
+      import(/* webpackChunkName: "skills" */ "./pages/TheSkillsPage.vue"),
+  },
+  {
+    path: "/testimonials",
+    name: "testimonials",
+    component: () =>
+      import(
+        /* webpackChunkName: "testimonials" */ "./pages/TheTestimonialsPage.vue"
+      ),
   },
 ];
 
