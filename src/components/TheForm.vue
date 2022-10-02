@@ -1,4 +1,5 @@
 <template>
+  <h2>Reach out Me</h2>
   <form @submit.prevent="submitHandler">
     <label for="first-name">First Name</label>
     <input id="first-name" placeholder="Behailu" v-model="firstName" />
@@ -25,16 +26,16 @@ export default defineComponent({
     let userName = ref<string>("");
     let message = ref<string>("");
 
-    const formData = computed(function () {
+    const formData = () => {
       return {
         firstName: firstName.value,
         lastName: lastName.value,
         userName: userName.value,
         message: message.value,
       };
-    });
+    };
     const submitHandler = () => {
-      console.log("data", formData);
+      console.log("data", formData());
       firstName.value = "";
       lastName.value = "";
       userName.value = "";
