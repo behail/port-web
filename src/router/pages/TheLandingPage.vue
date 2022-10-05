@@ -1,55 +1,51 @@
 <template>
-  <the-card>
-  <figure class="md:flex bg-slate-100 rounded-tl-xl rounded-tr-xl p-8 md:p-0 dark:bg-slate-800">
-      <img class="md:w-50 md:h-70 md:rounded-tr-lg rounded-full w-48 mx-auto"
+  <figure class="md:flex bg-slate-800 p-8 md:p-0 dark:bg-slate-800">
+      <img class="p-12 md:w-50 md:h-70 md:rounded-tr-lg rounded-full w-48 mx-auto"
             src="../../assets/bm.jpeg" alt="">
-
       <div class="p-8 md:p-20 text-center md:text-left space-y-4">
         <blockquote>
-          <p class="text-lg font-medium text-white">
-            I Am Front End developer with industry experience building websites and web
-            applications.Skilled in Front-End software development, Software Testing, React, ES6,
-            Typescript,and Vue3. Strong engineering professional with a Bachelors focused in
-            Electrical and Computer Engineering from Bahir Dar University.
-          </p>
+          <p class="text-lg font-medium text-white pt-28 pb-2">
+            HI THERE! I'M</p> <p class="text-pinksh uppercase italic text-xl pb-4">
+            <strong>{{ name }}</strong></p>
+             <p class="text-white text-lg"> A <strong>{{profession}}</strong> passionate about
+              creating interactive applications and experiences on the web.
+            </p>
         </blockquote>
-        <figcaption class="font-medium">
-          <div class="text-sky-500 dark:text-sky-400">
-            {{ name }}
-          </div>
-          <div class="text-slate-700 dark:text-slate-500">
-            <h3>{{ profession }}</h3>
-          </div>
-        </figcaption>
-        <div class="flex justify-center">
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/vue.png" alt="vue.js" />
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/react.png" alt="vue.js" />
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/ts.png" alt="vue.js" />
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/js.png" alt="vue.js" />
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/html.png" alt="vue.js" />
-          <img class="rounded-full w-12 h-12 p-2" src="../../assets/css.png" alt="vue.js" />
-        </div>
+        <Carousel :autoplay="4000" :itemsToShow="3" :wrap-around="true" class="w-96 pt-12">
+            <Slide class="p-2 m-2" v-for="item in items" :key="item.title">
+              <img class="rounded-full w-10 h-10 p-1" :src="item.icon"
+              alt="vue.js" />
+              <p class="text-white">{{item.title}}</p>
+            </Slide>
+          </Carousel>
+        <!-- <div class="flex justify-center text-white">
+          <i class="fa fa-cog fa-spin fa-3x fa-fw" ></i>
+        </div> -->
         <h1 class="text-white text-center font-bold text-2xl">Skills</h1>
       </div>
     </figure>
-    <div >
-      <!-- <p class="inline text-slate-700 dark:text-slate-500 pl-6 pr-6"
-        v-for="skill in topSkills" :key="skill">{{ skill }}</p> -->
-          <a class="inline text-slate-500 dark:text-slate-500 p-6"
-            v-for="social in socials" :key="social">{{ social }}</a>
+    <div class="text-white">
+        <a class="inline p-6"
+          v-for="social in socials" :key="social" :href="social.url" target="_blank">{{ social.name }}</a>
     </div>
-</the-card>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import TheCard from '@/views/Card/TheCard.vue';
+import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+
+// import TheCard from '@/views/Card/TheCard.vue';
 
 export default defineComponent({
-  components: { TheCard },
+  name: 'Autoplay',
+  components: {
+    Carousel,
+    Slide,
+  },
   setup() {
-    const name = ref('Behailu Misganaw');
-    const profession = ref('Web Developer');
+    const name = ref('Behailu Mesganaw');
+    const profession = ref('Frontend Web Developer');
     const topSkills = ref<string[]>([
       'ReactJs',
       'VueJs',
@@ -57,10 +53,19 @@ export default defineComponent({
       'HTML5',
       'TailWind',
     ]);
-    const socials = ref<string[]>(['Linkdin', 'Github']);
-
+    const socials = ref<object[]>([{ url: 'https://www.linkedin.com/in/behailu-mesganaw-706390118', name: 'Linkdin' },
+      { url: 'https://github.com/behail', name: 'Github' }]);
+    const imageSrc: string = '../../assets/css.png';
+    const items = [
+      { title: 'Vue', icon: require('../../assets/vue.png') },
+      { title: 'React', icon: require('../../assets/react.png') },
+      { title: 'TypeScript', icon: require('../../assets/ts.png') },
+      { title: 'JavaScript', icon: require('../../assets/js.png') },
+      { title: 'HTML', icon: require('../../assets/html.png') },
+      { title: 'CSS', icon: require('../../assets/css.png') },
+    ];
     return {
-      name, profession, topSkills, socials,
+      name, profession, topSkills, socials, imageSrc, items,
     };
   },
 });
@@ -72,6 +77,8 @@ export default defineComponent({
 <style scoped>
 .container {
   display: flex;
+  height: 48rem;
+  padding-top: 4rem;
 }
 /* img {
   border-radius: 1rem;

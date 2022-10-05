@@ -13,6 +13,9 @@ module.exports = {
       width: {
         50: '50%',
       },
+      colors: {
+        pinksh: 'rgb(249 198 17)',
+      },
     },
   },
   plugins: [],

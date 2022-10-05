@@ -2,9 +2,9 @@ interface Education {
   id: string;
   name: string;
   institution: string;
-  type: "Degree" | "Masters" | "Certificate" | "Diploma";
+  type: 'Degree' | 'Masters' | 'Certificate' | 'Diploma';
   file: string;
-  startTime?: Date;
+  startDate?: Date;
   endDate?: Date;
   gpa?: number;
   maxPoint?: number;
