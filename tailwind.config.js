@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         pinksh: 'rgb(249 198 17)',
+        darkBlue: '#1E293B',
       },
     },
   },

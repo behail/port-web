@@ -1,15 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card p-2 md:p-4 m-2 md:m-4 rounded-md border-2 border-white drop-shadow-md">
     <slot></slot>
   </div>
 </template>
-
-<style scoped>
-.card {
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(143, 143, 143, 0.26);
-  border: 1px white solid;
-  margin: 1rem;
-  padding: 1rem;
-}
-</style>
