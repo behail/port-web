@@ -4,7 +4,6 @@
     <div>
       <router-view></router-view>
       <the-main></the-main>
-      <!-- <the-footer></the-footer> -->
     </div>
   </section>
 </template>
@@ -13,10 +12,9 @@
 import { defineComponent } from 'vue';
 import TheSideBar from '@/views/SideBar/TheSidebar.vue';
 import TheMain from '@/components/Main/TheMain.vue';
-// import TheFooter from "@/views/Footer/TheFooter.vue";
 
 export default defineComponent({
-  components: { /* TheFooter */ TheSideBar, TheMain },
+  components: { TheSideBar, TheMain },
 });
 </script>
 <style>
@@ -33,16 +31,16 @@ body {
 section {
   display: flex;
 }
-nav {
+/* nav {
   padding: 30px;
-}
+} */
 
-nav a {
+/* nav a {
   font-weight: bold;
   color: #2c3e50;
-}
+} */
 
-nav a.router-link-exact-active {
+/* nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>

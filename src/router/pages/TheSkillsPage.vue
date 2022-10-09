@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-3">
+  <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
     <div v-for="Skill in Skills" :key="Skill.id">
       <SkillsItem :skill="Skill" />
     </div>

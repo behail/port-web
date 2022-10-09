@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 p-4 md:p-24 w-4/4 md:w-3/4 m-auto">
-    <section  v-for="Education in EducationData" :key="Education.id">
-      <EducationItem :educationProps="Education"/>
-    </section>
-  </div>
+   <div>
+     <section  v-for="Education in EducationData" :key="Education.id">
+       <EducationItem :educationProps="Education"/>
+     </section>
+   </div>
 </template>
 
 <script lang="ts">
@@ -20,7 +20,38 @@ export default defineComponent({
     const EducationData: Education[] = [
       {
         id: uuidv4(),
-        name: 'BSc. In Electrical and Computer Engineering',
+        name: 'Vue',
+        detail: 'Vue – The Complete Guide (incl. Router & Composition API)',
+        institution: 'Udemy',
+        type: 'Certificate',
+        file: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-17f9dc1a-aa3b-42f4-8b56-6b162b0eb938.pdf#toolbar=0',
+        startDate: new Date('10-10-2021'),
+        endDate: new Date('10-12-2021'),
+      },
+      {
+        id: uuidv4(),
+        name: 'React',
+        detail: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+        institution: 'Udemy',
+        type: 'Certificate',
+        file: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-856e6e2f-98e4-4fef-981e-2e426cf49ee3.pdf#toolbar=0',
+        startDate: new Date('10-10-2021'),
+        endDate: new Date('10-12-2021'),
+      },
+      {
+        id: uuidv4(),
+        name: 'JavaScript',
+        detail: 'JavaScript - The Complete Guide 2022 (Beginner + Advanced) ',
+        institution: 'Udemy',
+        type: 'Certificate',
+        file: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-827b773b-5fb7-48c5-bf46-2275156cd262.pdf#toolbar=0',
+        startDate: new Date('10-8-2021'),
+        endDate: new Date('10-10-2021'),
+      },
+      {
+        id: uuidv4(),
+        name: 'Electrical and Computer Engineering',
+        detail: 'BSc. In Electrical and Computer Engineering',
         institution: 'Bahir Dar University',
         type: 'Degree',
         file: 'TODO',
@@ -29,33 +60,7 @@ export default defineComponent({
         gpa: 3.6,
         maxPoint: 4,
       },
-      {
-        id: uuidv4(),
-        name: 'JavaScript - The Complete Guide 2022 (Beginner + Advanced) ',
-        institution: 'Udemy',
-        type: 'Certificate',
-        file: 'TODO',
-        startDate: new Date('10-8-2021'),
-        endDate: new Date('10-10-2021'),
-      },
-      {
-        id: uuidv4(),
-        name: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
-        institution: 'Udemy',
-        type: 'Certificate',
-        file: 'TODO',
-        startDate: new Date('10-10-2021'),
-        endDate: new Date('10-12-2021'),
-      },
-      {
-        id: uuidv4(),
-        name: 'Vue – The Complete Guide (incl. Router & Composition API)',
-        institution: 'Udemy',
-        type: 'Certificate',
-        file: 'TODO',
-        startDate: new Date('10-10-2021'),
-        endDate: new Date('10-12-2021'),
-      },
+
     ];
     return { EducationData };
   },

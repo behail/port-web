@@ -1,6 +1,7 @@
 interface Education {
   id: string;
   name: string;
+  detail: string,
   institution: string;
   type: 'Degree' | 'Masters' | 'Certificate' | 'Diploma';
   file: string;

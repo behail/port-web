@@ -1,7 +1,7 @@
 <template>
   <div class="the-sidebar">
     <router-link to="/">
-      <img src="../../assets/bm.jpeg" alt="BM_Photo" class="w-8 md:w-12 h-8 md:h-12  rounded-full"/>
+      <img src="../../assets/icons/bm.jpeg" alt="BM_Photo" class="w-8 md:w-12 h-8 md:h-12  rounded-full"/>
       <span>Home</span>
     </router-link>
     <router-link to="/education" class="sideBarText">

@@ -1,7 +1,7 @@
 <template>
   <figure class="md:flex md:p-8 p-0">
       <img class=" p-8 md:p-12 md:w-50 md:h-70 md:rounded-tr-lg rounded-full w-48 mx-auto"
-            src="../../assets/bm.jpeg" alt="">
+            src="../../assets/icons/bm.jpeg" alt="">
       <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
         <blockquote class="p-2 pt-0 md:pt-28 pb-2">
           <p class="text-lg font-medium text-white">
@@ -60,14 +60,14 @@ export default defineComponent({
     ]);
     const socials = ref<object[]>([{ url: 'https://www.linkedin.com/in/behailu-mesganaw-706390118', name: 'Linkdin' },
       { url: 'https://github.com/behail', name: 'Github' }]);
-    const imageSrc: string = '../../assets/css.png';
+    const imageSrc: string = '../../assets/icons/css.png';
     const items = [
-      { title: 'Vue', icon: require('../../assets/vue.png') },
-      { title: 'React', icon: require('../../assets/react.png') },
-      { title: 'TypeScript', icon: require('../../assets/ts.png') },
-      { title: 'JavaScript', icon: require('../../assets/js.png') },
-      { title: 'HTML', icon: require('../../assets/html.png') },
-      { title: 'CSS', icon: require('../../assets/css.png') },
+      { title: 'Vue', icon: require('../../assets/icons/vue.png') },
+      { title: 'React', icon: require('../../assets/icons/react.png') },
+      { title: 'TypeScript', icon: require('../../assets/icons/ts.png') },
+      { title: 'JavaScript', icon: require('../../assets/icons/js.png') },
+      { title: 'HTML', icon: require('../../assets/icons/html.png') },
+      { title: 'CSS', icon: require('../../assets/icons/css.png') },
     ];
     return {
       name, profession, topSkills, socials, imageSrc, items,

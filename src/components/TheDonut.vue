@@ -1,6 +1,6 @@
 <template>
-   <div class="svg-item">
-       <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+   <div class="svg-item w-full">
+       <svg width="100%" height="100%" viewBox="0 0 40 40" >
            <circle class="donut-hole" cx="20" cy="20" :r="RADIUS" fill="#1E293B"></circle>
            <circle class="donut-ring" cx="20" cy="20" :r="RADIUS" fill="transparent"
            stroke-width="2"></circle>
@@ -9,7 +9,8 @@
            :stroke-dashoffset="strokeDashoffset"></circle>
            <g class="donut-text donut-text-1">
                <text y="50%" transform="translate(0, 2)">
-        <tspan x="50%" text-anchor="middle" class="donut-percent">{{level}}</tspan>
+        <tspan x="50%" text-anchor="middle" class="donut-percent font-bold">
+            {{level}}</tspan>
       </text>
     </g>
   </svg>
@@ -40,9 +41,9 @@ export default defineComponent({
 
 <style scoped>
 .svg-item {
-    width: 100%;
-    font-size: 16px;
-    margin: 0 auto;
+    /* width: 100%; */
+    /* font-size: 16px; */
+    /* margin: 0 auto; */
     animation: donutfade 1s;
 }
 .donut-ring {
@@ -122,13 +123,13 @@ export default defineComponent({
     animation: donutfadelong 1s;
 }
 .donut-data {
-    font-size: 0.12em;
-    line-height: 1;
+    /* font-size: 0.12em; */
+    /* line-height: 1; */
     transform: translateY(0.5em);
-    text-align: center;
-    text-anchor: middle;
-    color:#666;
-    fill: #666;
+    /* text-align: center; */
+    /* text-anchor: middle; */
+    /* color:#666; */
+    /* fill: #666; */
     animation: donutfadelong 1s;
 }
 
@@ -147,8 +148,8 @@ export default defineComponent({
 }
 
 .donut-label {
-    font-size: 0.28em;
-    font-weight: 700;
+    /* font-size: 0.28em; */
+    /* font-weight: 700; */
     line-height: 1;
     fill: #000;
     transform: translateY(0.25em);
@@ -158,7 +159,6 @@ export default defineComponent({
     font-size: 0.1em;
     line-height: 1;
     transform: translateY(0.5em);
-    font-weight: bold;
 }
 
 </style>

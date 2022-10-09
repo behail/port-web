@@ -1,6 +1,6 @@
 <template>
   <the-card>
-    <img src="../assets/bm.jpeg" alt="Avatar" class="avatar">
+    <img src="../assets/icons/bm.jpeg" alt="Avatar" class="avatar">
           <h2>{{ testimonial.name }}</h2>
           <h3>{{ testimonial.association }}</h3>
           <p class="text-white ">Testimonial: {{ testimonial.testimonial }}</p>

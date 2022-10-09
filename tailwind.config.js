@@ -9,13 +9,18 @@ module.exports = {
       height: {
         30: '30rem',
         70: '70%',
+        372: '372px',
       },
       width: {
         50: '50%',
+        500: '500px',
       },
       colors: {
         pinksh: 'rgb(249 198 17)',
         darkBlue: '#1E293B',
+      },
+      padding: {
+        75: '75%',
       },
     },
   },
