@@ -1,23 +1,18 @@
 <template>
-    <!-- <the-card> -->
       <div>
-        <h3>{{ skill.name }}</h3>
-        <h4>{{ skill.level }}</h4>
+        <h3 class=" uppercase text-2xl font-bold">{{ skill.name }}</h3>
         <TheDonut :level="skill.level"/>
       </div>
-    <!-- </the-card> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { Skill } from '@/types/Expereince';
 import TheDonut from './TheDonut.vue';
-import TheCard from '@/views/Card/TheCard.vue';
 
 export default defineComponent({
   components: {
     TheDonut,
-    TheCard,
   },
   props: {
     skill: {

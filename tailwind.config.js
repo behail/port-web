@@ -22,6 +22,9 @@ module.exports = {
       padding: {
         75: '75%',
       },
+      borderWidth: {
+        1: '0.5px',
+      },
     },
   },
   plugins: [],

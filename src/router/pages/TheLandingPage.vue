@@ -31,7 +31,7 @@
     </figure>
 
     <div class="text-white flex flex-row justify-center items-center align-bottom mt-24 md:mt-auto">
-      <p class=" uppercase text-xs text-slate-500 italic">Reach out to me with</p>
+      <p class=" uppercase text-xs text-slate-500 italic">Reach out to me on</p>
         <a class=" pl-2 uppercase font-light text-md underline"
           v-for="social in socials" :key="social" :href="social.url" target="_blank">{{ social.name }}</a>
     </div>

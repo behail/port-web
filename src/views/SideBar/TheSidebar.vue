@@ -1,12 +1,14 @@
 <template>
   <div class="the-sidebar">
     <router-link to="/">
-      <img src="../../assets/icons/bm.jpeg" alt="BM_Photo" class="w-8 md:w-12 h-8 md:h-12  rounded-full"/>
+      <!-- <img src="../../assets/icons/bm.jpeg" alt="BM_Photo"
+      class="w-8 md:w-12 h-8 md:h-12  rounded-full"/> -->
+      <i class="fa fa-home text-lg md:text-2xl"></i>
       <span>Home</span>
     </router-link>
     <router-link to="/education" class="sideBarText">
       <i class='fas fa-graduation-cap text-lg md:text-2xl'></i>
-      <span class=" font-bold">Education</span></router-link>
+      <span class=" font-bold text-sm">Education</span></router-link>
 
     <router-link to="/experience" class="sideBarText">
       <i class="fa fa-line-chart text-lg md:text-2xl" aria-hidden="true"></i>
@@ -34,8 +36,8 @@ export default defineComponent({});
 <style scoped>
 
 .the-sidebar{
- list-style: outside none none;
-    padding: 0;
+ /* list-style: outside none none; */
+    /* padding: 0; */
 }
 .the-sidebar a{
  display: block;
@@ -44,8 +46,9 @@ export default defineComponent({});
 }
 
 .the-sidebar span {
-  font-size: x-large;
-  color: #1E293B;
+  /* font-size: x-large; */
+    z-index: 1;
+    color: #ffff;
     font-weight: 400;
     text-transform: uppercase;
     bottom: 0;
@@ -71,7 +74,8 @@ transition: 0.50s;
 .the-sidebar a:hover{text-decoration:none;}
 .the-sidebar a span{
 background-color: rgb(249 198 17);
-color:#1E293B;
+color:#fff;
+font-weight: bold;
 }
 /* i {
   font-size: xx-large;
