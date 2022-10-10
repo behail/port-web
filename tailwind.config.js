@@ -13,7 +13,10 @@ module.exports = {
       },
       width: {
         50: '50%',
+        41: '41rem',
+        70: '70rem',
         500: '500px',
+
       },
       colors: {
         pinksh: 'rgb(249 198 17)',
@@ -21,6 +24,10 @@ module.exports = {
       },
       padding: {
         75: '75%',
+      },
+      margin: {
+        25: '25%',
+        50: '50%',
       },
       borderWidth: {
         1: '0.5px',

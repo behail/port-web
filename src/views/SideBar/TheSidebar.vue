@@ -1,9 +1,9 @@
 <template>
-  <div class="the-sidebar">
+  <div class="the-sidebar ">
     <router-link to="/">
       <!-- <img src="../../assets/icons/bm.jpeg" alt="BM_Photo"
       class="w-8 md:w-12 h-8 md:h-12  rounded-full"/> -->
-      <i class="fa fa-home text-lg md:text-2xl"></i>
+      <i class="fa fa-home text-lg md:text-3xl"></i>
       <span>Home</span>
     </router-link>
     <router-link to="/education" class="sideBarText">
@@ -36,8 +36,9 @@ export default defineComponent({});
 <style scoped>
 
 .the-sidebar{
- /* list-style: outside none none; */
-    /* padding: 0; */
+    padding-top: 17%;
+    padding-left: 1%;
+    position: fixed;
 }
 .the-sidebar a{
  display: block;
@@ -46,7 +47,6 @@ export default defineComponent({});
 }
 
 .the-sidebar span {
-  /* font-size: x-large; */
     z-index: 1;
     color: #ffff;
     font-weight: 400;
@@ -77,9 +77,5 @@ background-color: rgb(249 198 17);
 color:#fff;
 font-weight: bold;
 }
-/* i {
-  font-size: xx-large;
-  color: rgb(249 198 17);
-} */
 
 </style>
