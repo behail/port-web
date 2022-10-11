@@ -20,9 +20,10 @@ export default defineComponent({
 <style>
 body {
   background-color: #1E293B;
+  font-family: 'ABeeZee', serif;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'ABeeZee',Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

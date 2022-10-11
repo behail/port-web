@@ -1,6 +1,6 @@
 <template>
       <div>
-        <h3 class=" uppercase text-2xl font-bold">{{ skill.name }}</h3>
+        <h3 class=" pr-14 uppercase text-2xl font-bold">{{ skill.name }}</h3>
         <TheDonut :level="skill.level"/>
       </div>
 </template>

@@ -1,88 +1,81 @@
 <template>
   <div>
     <Carousel :autoplay="4000" :itemsToShow="1" :wrap-around="true"
-      class=" w-500 m-24 ml-96 bg-transparent pt-12  border-white
+    snapAlign='center'
+      class=" w-96 md:w-500 md:m-24 md:ml-96 bg-transparent pt-12
       rounded-md drop-shadow-2xl ">
           <Slide v-for="Skill in Skills" :key="Skill.id">
             <SkillsItem :skill="Skill" />
           </Slide>
       </Carousel>
-      <!-- <Carousel :autoplay="4000" :itemsToShow="1" :wrap-around="true"
-      class=" w-500 h-96 m-0 ml-96 bg-transparent pt-24 border-1 border-white
-      rounded-md"> -->
-          <!-- <Slide v-for="Skill in Skills" :key="Skill.id"> -->
-            <!-- <div v-for="Skill in Skills" :key="Skill.id" class=" flex"> -->
               <div class="flex">
                 <section>
-                    <div class="content ml-16">
-                      <h2 class=" top-20 left-60">React JS</h2>
-                      <h2 class=" top-20 left-60">React JS</h2>
+                    <div class="content md:ml-16">
+                      <h2 class="md:top-24 md:left-80">React JS</h2>
+                      <h2 class=" md:top-24 md:left-80">React JS</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2 class=" top-40 left-60">Vue JS</h2>
-                      <h2 class=" top-40 left-60">Vue JS</h2>
+                      <h2 class=" md:top-48 md:left-60">Vue JS</h2>
+                      <h2 class=" md:top-48 md:left-60">Vue JS</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-36">
-                      <h2 class=" top-60 left-60">JavaScript</h2>
-                      <h2 class=" top-60 left-60">JavaScript</h2>
+                      <h2 class=" md:top-72 md:left-80">JavaScript</h2>
+                      <h2 class=" md:top-72 md:left-80">JavaScript</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-40">
-                      <h2 class=" top-80 left-60">Typescript</h2>
-                      <h2 class=" top-80 left-60">Typescript</h2>
+                      <h2 class=" md:top-96 md:left-60">Typescript</h2>
+                      <h2 class=" md:top-96 md:left-60">Typescript</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2 class=" left-80">HTML</h2>
-                      <h2 class=" left-80">HTML</h2>
+                      <h2 class=" md:left-96">HTML</h2>
+                      <h2 class=" md:left-96">HTML</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content">
-                      <h2 class=" left-96">Jest</h2>
-                      <h2 class=" left-96">Jest</h2>
+                      <h2 class=" md:right-72 md:top-96">Jest</h2>
+                      <h2 class=" md:right-72 md:top-96">Jest</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2>Git/Github</h2>
-                      <h2>Git/Github</h2>
+                      <h2 class="md:pr-28" >Git/Github</h2>
+                      <h2 class="md:pr-28">Git/Github</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-40">
-                      <h2>VS Code</h2>
-                      <h2>VS Code</h2>
+                      <h2 class=" md:right-60">VS Code</h2>
+                      <h2 class=" md:right-60">VS Code</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-40">
-                      <h2 class="top-80 right-28">Tailwind CSS</h2>
-                      <h2 class="top-80 right-28">Tailwind CSS</h2>
+                      <h2 class="md:top-72 md:right-52">Tailwind CSS</h2>
+                      <h2 class="md:top-72 md:right-52">Tailwind CSS</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-40">
-                      <h2 class="top-40 right-2">Vanilla Extract Css</h2>
-                      <h2 class="top-40 right-2">Vanilla Extract Css</h2>
+                      <h2 class="md:top-48 md:right-2">Vanilla Extract Css</h2>
+                      <h2 class="md:top-48 md:right-2">Vanilla Extract Css</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-40">
-                      <h2 class="top-20 right-28">Vue Test Utils</h2>
-                      <h2 class="top-20 right-28">Vue Test Utils</h2>
+                      <h2 class="md:top-24 md:right-52">Vue Test Utils</h2>
+                      <h2 class="md:top-24 md:right-52">Vue Test Utils</h2>
                     </div>
                   </section>
               </div>
-          <!-- </div> -->
-          <!-- </Slide>
-      </Carousel> -->
     </div>
     </template>
 

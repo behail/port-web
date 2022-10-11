@@ -1,6 +1,6 @@
 <template>
-   <div class="svg-item w-full">
-       <svg width="100%" height="100%" viewBox="0 0 40 40" >
+   <div class="w-3/4">
+       <svg class=" w-full h-full" viewBox="0 0 40 40" >
            <circle class="donut-hole" cx="20" cy="20" :r="RADIUS" fill="#1E293B"></circle>
            <circle class="donut-ring" cx="20" cy="20" :r="RADIUS" fill="transparent"
            stroke-width="2"></circle>

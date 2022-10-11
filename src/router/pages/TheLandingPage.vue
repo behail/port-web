@@ -1,6 +1,7 @@
 <template>
   <figure class="md:flex md:p-8 p-0">
-      <img class=" p-8 md:p-12 md:w-50 md:h-70 md:rounded-tr-lg rounded-full w-48 mx-auto"
+      <img class="  ml-8 p-8 md:p-12 md:w-50 md:h-70 md:rounded-tr-lg
+      rounded-full w-80 mx-auto"
             src="../../assets/icons/bm.jpeg" alt="">
       <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
         <blockquote class="p-2 pt-0 md:pt-28 pb-2">
@@ -32,7 +33,7 @@
 
     <div class="text-white flex flex-row justify-center items-center align-bottom mt-24 md:mt-auto">
       <p class=" uppercase text-xs text-slate-500 italic">Reach out to me on</p>
-        <a class=" pl-2 uppercase font-light text-sm underline hover:text-pinksh"
+        <a class=" pl-2 uppercase font-light text-gray-400 text-sm underline hover:text-pinksh"
           v-for="social in socials" :key="social" :href="social.url" target="_blank">{{ social.name }}</a>
     </div>
 </template>

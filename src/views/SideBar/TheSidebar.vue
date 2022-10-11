@@ -1,36 +1,56 @@
 <template>
-  <div class="the-sidebar ">
-    <router-link to="/">
-      <!-- <img src="../../assets/icons/bm.jpeg" alt="BM_Photo"
-      class="w-8 md:w-12 h-8 md:h-12  rounded-full"/> -->
-      <i class="fa fa-home text-lg md:text-3xl"></i>
-      <span>Home</span>
-    </router-link>
-    <router-link to="/education" class="sideBarText">
-      <i class='fas fa-graduation-cap text-lg md:text-2xl'></i>
-      <span class=" font-bold text-sm">Education</span></router-link>
+  <div>
+    <button v-if="!showSideBar" @click="openSidebar()"
+    class=" humbrder-icon text-3xl m-2 top-0 ">&#9776;</button>
+    <button @click="closeSideBar()" v-else class=" text-2xl m-4 top-2 font-bold">X
+    </button>
+    <div class="the-sidebar hidden md:block" id="side-bar">
+      <router-link to="/">
+        <em class="fa fa-home text-lg md:text-3xl"></em>
+        <span class=" font-bold text-xs md:text-sm">Home</span>
+      </router-link>
+      <router-link to="/education" class="sideBarText">
+        <i class='fas fa-graduation-cap text-lg md:text-2xl'></i>
+        <span class="font-bold text-xs md:text-sm">Education</span></router-link>
 
-    <router-link to="/experience" class="sideBarText">
-      <i class="fa fa-line-chart text-lg md:text-2xl" aria-hidden="true"></i>
-      <span >Experience</span></router-link>
+      <router-link to="/experience" class="sideBarText">
+        <i class="fa fa-line-chart text-lg md:text-2xl" aria-hidden="true"></i>
+        <span class=" font-bold text-xs md:text-sm" >Experience</span></router-link>
 
-    <router-link to="/skills" class="sideBarText">
-      <i class="fa fa-cog text-lg md:text-2xl"></i>
-      <span >Skills</span></router-link>
-    <router-link to="/testimonials" class="sideBarText">
-      <i class="fa fa-handshake-o text-lg md:text-2xl" aria-hidden="true"></i>
-      <span>Testimonials</span></router-link>
+      <router-link to="/skills" class="sideBarText">
+        <i class="fa fa-cog text-lg md:text-2xl"></i>
+        <span class=" font-bold text-xs md:text-sm" >Skills</span></router-link>
+      <router-link to="/testimonials" class="sideBarText">
+        <i class="fa fa-handshake-o text-lg md:text-2xl" aria-hidden="true"></i>
+        <span class=" font-bold text-xs md:text-sm">Testimonials</span></router-link>
 
-      <router-link to="/contact" class="sideBarText">
-        <i class="fa fa-phone text-lg md:text-2xl" aria-hidden="true"></i>
-      <span > Contact Me</span></router-link>
+        <router-link to="/contact" class="sideBarText">
+          <i class="fa fa-phone text-lg md:text-2xl" aria-hidden="true"></i>
+        <span class=" font-bold text-xs md:text-sm"> Contact Me</span></router-link>
+    </div>
+
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+    const showSideBar = ref<boolean>(false);
+    function openSidebar() {
+      const sideBar = document.getElementById('side-bar')!;
+      sideBar.style.display = 'block';
+      showSideBar.value = true;
+    }
+    function closeSideBar() {
+      const sideBar = document.getElementById('side-bar')!;
+      sideBar.style.display = 'none';
+      showSideBar.value = false;
+    }
+    return { openSidebar, showSideBar, closeSideBar };
+  },
+});
 </script>
 
 <style scoped>
@@ -39,9 +59,10 @@ export default defineComponent({});
     padding-top: 17%;
     padding-left: 1%;
     position: fixed;
+    z-index: 1;
 }
 .the-sidebar a{
- display: block;
+    display: block;
     padding: 7px;
     position: relative;
 }
@@ -65,6 +86,10 @@ export default defineComponent({});
 -moz-transition: 0.50s;
 transition: 0.50s;
 }
+
+.humbrder-icon{
+  display: none;
+}
 .the-sidebar a:hover span{
   width:auto;
   padding:0 15px;
@@ -78,4 +103,38 @@ color:#fff;
 font-weight: bold;
 }
 
+@media screen and (max-width: 700px) {
+  .the-sidebar {
+    width: auto;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* top: 0%; */
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+  .the-sidebar a:hover span{
+  width:auto;
+  padding:0 15px;
+  overflow:visible;
+  border-top-right-radius: 12px;
+ }
+
+  .humbrder-icon{
+  display: block;
+}
+}
+
+/* @media screen and (max-width: 400px) {
+
+  .the-sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .humbrder-icon{
+  display: block;
+}
+} */
 </style>

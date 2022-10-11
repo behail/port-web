@@ -1,7 +1,7 @@
 <template>
-      <div class=" ml-0 md:ml-10 mb-16 p-2 w-full items-center">
+      <div class=" ml-0 md:ml-40 mt-0 md:mt-4 mb-16 p-2 w-full items-center">
         <div class="flex justify-center p-0 ml-0 md:ml-16 mt-6 mb-4 md:m-4
-        border-t-2 border-b-2 border-white">
+        border-t-1 border-b-1 border-white">
           <div class=" flex  course-name"
           v-for="name in courseName" :key="name">
             <span class="text-pinksh md:p-1 pt-2 pb-2 font-semibold
@@ -22,7 +22,7 @@
             <p>{{ duration }}</p>
           </div>
           <button @click="showCertificateTriger()"
-          class=" p-2 hover:pl-3 hover:pr-3 pt-1 pb-1 m-2 border-white border-2
+          class=" p-4 pl-10 pr-10 m-2 border-gray-400 border-1
           rounded-md bg-transparent hover:font-bold text-white
           hover:bg-white hover:text-darkBlue uppercase">
             Certificate</button>
