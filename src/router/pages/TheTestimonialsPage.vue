@@ -6,8 +6,7 @@
           <TestimonialsItem :testimonial="Testimonial" />
         </Slide>
   </Carousel>
-   <!-- class=" w-30 ml-50 bg-transparent pt-12  border-white
-    rounded-md drop-shadow-2xl " -->
+
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
@@ -26,7 +25,7 @@ export default defineComponent({
     const Testimonial1 = reactive<Testimonial>({
       id: uuidv4(),
       name: 'Melaku Asefa',
-      contact: 'melaku@assefa.com',
+      contact: 'melaku@uplancer.io',
       association: 'Colleague',
       testimonial: 'He is Excellent',
       avator: require('../../assets/icons/mele.jpeg'),

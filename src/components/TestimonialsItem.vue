@@ -20,8 +20,7 @@
             <div v-for="Social in testimonial.social" :key="Social.id">
               <a target="blank" v-if="Social.name === 'Linkdin'" :href="Social.url ">
                 <i class="fa fa-linkedin text-md pl-2"></i></a>
-              <!-- <a v-if="Social.name === 'Github'" :href="Social.url ">
-                <i class="fa fa-github text-3xl"></i></a> -->
+
             </div>
           </div>
     </div>
