@@ -2,77 +2,85 @@
   <div>
     <Carousel :autoplay="4000" :itemsToShow="1" :wrap-around="true"
     snapAlign='center'
-      class=" w-96 md:w-500 md:m-24 md:ml-96 bg-transparent pt-12
+      class=" w-72 md:w-500 md:m-24 md:ml-96 bg-transparent pt-6 md:pt-12
       rounded-md drop-shadow-2xl ">
           <Slide v-for="Skill in Skills" :key="Skill.id">
-            <SkillsItem :skill="Skill" />
-          </Slide>
-      </Carousel>
+                <SkillsItem :skill="Skill" />
+              </Slide>
+          </Carousel>
               <div class="flex">
                 <section>
                     <div class="content md:ml-16">
-                      <h2 class="md:top-24 md:left-80">React JS</h2>
-                      <h2 class=" md:top-24 md:left-80">React JS</h2>
+                      <h2 class=" top-64 md:top-24 left-32 md:left-80">React JS</h2>
+                      <h2 class=" top-64 md:top-24 left-32 md:left-80">React JS</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2 class=" md:top-48 md:left-60">Vue JS</h2>
-                      <h2 class=" md:top-48 md:left-60">Vue JS</h2>
+                      <h2 class=" bottom-72 md:bottom-auto md:top-48
+                      left-20 md:left-60">
+                        Vue JS</h2>
+                      <h2 class=" bottom-72 md:bottom-auto md:top-48 left-20 md:left-60">Vue JS</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-36">
-                      <h2 class=" md:top-72 md:left-80">JavaScript</h2>
-                      <h2 class=" md:top-72 md:left-80">JavaScript</h2>
+                    <div class="content md:ml-36">
+                      <h2 class=" bottom-60 md:bottom-auto md:top-72 md:left-80">JavaScript</h2>
+                      <h2 class=" bottom-60 md:bottom-auto md:top-72 md:left-80">JavaScript</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-40">
-                      <h2 class=" md:top-96 md:left-60">Typescript</h2>
-                      <h2 class=" md:top-96 md:left-60">Typescript</h2>
+                    <div class="content md:ml-40">
+                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-96 md:left-60">
+                        Typescript</h2>
+                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-96 md:left-60">
+                        Typescript</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2 class=" md:left-96">HTML</h2>
-                      <h2 class=" md:left-96">HTML</h2>
+                      <h2 class=" bottom-52 md:bottom-auto md:left-96">HTML</h2>
+                      <h2 class=" bottom-52 md:bottom-auto md:left-96">HTML</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content">
-                      <h2 class=" md:right-72 md:top-96">Jest</h2>
-                      <h2 class=" md:right-72 md:top-96">Jest</h2>
+                      <h2 class=" md:right-72 ml-0 md:ml-auto top-64 md:top-96">Jest</h2>
+                      <h2 class=" md:right-72 ml-0 md:ml-auto top-64 md:top-96">Jest</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-32">
-                      <h2 class="md:pr-28" >Git/Github</h2>
-                      <h2 class="md:pr-28">Git/Github</h2>
+                    <div class="content md:ml-32">
+                      <h2 class=" pr-36 bottom-72 md:bottom-auto md:pr-28" >Git/Github</h2>
+                      <h2 class=" pr-36 bottom-72 md:bottom-auto md:pr-28">Git/Github</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-40">
-                      <h2 class=" md:right-60">VS Code</h2>
-                      <h2 class=" md:right-60">VS Code</h2>
+                    <div class="content md:ml-40">
+                      <h2 class=" left-24 md:left-auto bottom-36 md:bottom-auto md:right-60">
+                        VS Code</h2>
+                      <h2 class=" left-24 md:left-auto bottom-36 md:bottom-auto md:right-60">
+                        VS Code</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-40">
-                      <h2 class="md:top-72 md:right-52">Tailwind CSS</h2>
-                      <h2 class="md:top-72 md:right-52">Tailwind CSS</h2>
+                    <div class="content md:ml-40">
+                      <h2 class=" left-28 bottom-0  md:left-auto md:top-72 md:right-52">
+                        Tailwind CSS</h2>
+                      <h2 class=" left-28 bottom-0 md:left-auto  md:top-72 md:right-52">
+                        Tailwind CSS</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-40">
-                      <h2 class="md:top-48 md:right-2">Vanilla Extract Css</h2>
-                      <h2 class="md:top-48 md:right-2">Vanilla Extract Css</h2>
+                    <div class="content md:ml-40">
+                      <h2 class=" left-32 bottom-6 md:top-48 md:right-2">Vanilla Extract Css</h2>
+                      <h2 class="left-32 bottom-6 md:top-48 md:right-2">Vanilla Extract Css</h2>
                     </div>
                   </section>
                   <section>
-                    <div class="content ml-40">
-                      <h2 class="md:top-24 md:right-52">Vue Test Utils</h2>
-                      <h2 class="md:top-24 md:right-52">Vue Test Utils</h2>
+                    <div class="content md:ml-40">
+                      <h2 class=" left-72 bottom-0 md:top-24 md:right-52">Vue Test Utils</h2>
+                      <h2 class="left-72 bottom-0 md:top-24 md:right-52">Vue Test Utils</h2>
                     </div>
                   </section>
               </div>
