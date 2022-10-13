@@ -1,17 +1,19 @@
 <template>
-  <Carousel class=" w-70 ml-32 mt-36 h-full" :autoplay="4000" :itemsToShow="1.5" :wrap-around="true"
+  <Carousel  :breakpoints="breakpoints"
+  class="w-80 md:w-70 ml-0 md:ml-32 mt-10 md:mt-36 h-full"
+  :autoplay="4000" :itemsToShow="1.5" :wrap-around="true"
   :pauseAutoplayOnHover="true"
      >
-        <Slide v-for="Testimonial in Testimonials" :key="Testimonial.id">
+        <Slide class="slide" v-for="Testimonial in Testimonials" :key="Testimonial.id">
           <TestimonialsItem :testimonial="Testimonial" />
         </Slide>
   </Carousel>
-
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
 import { v4 as uuidv4 } from 'uuid';
 import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 import { Testimonial } from '@/types/Testimonial';
 import TestimonialsItem from '@/components/TestimonialsItem.vue';
 
@@ -130,5 +132,22 @@ export default defineComponent({
     ];
     return { Testimonials };
   },
+  data() {
+    return {
+      // corousel
+      breakpoints: {
+        300: {
+          itemsToShow: 1,
+        },
+        700: {
+          itemsToShow: 1.5,
+        },
+      },
+    };
+  },
 });
 </script>
+
+<style scoped>
+
+</style>

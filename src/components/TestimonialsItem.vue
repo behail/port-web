@@ -1,10 +1,10 @@
 <template>
-    <div class="w-41 h-full h-min-96 m-2 p-4 border-1 border-gray-400 rounded-md
+    <div class="w-41 h-full h-min-96 m-2 md:p-4 border-1 border-gray-400 rounded-md
      drop-shadow-2xl ">
     <img :src="testimonial.avator" alt="Avatar" class="avatar">
           <h2 class=" uppercase font-bold p-3 text-2xl">{{ testimonial.name }}</h2>
           <h3 class=" uppercase text-blue-300 font-bold text-sm">{{ testimonial.association }}</h3>
-          <div class=" p-4 text-center">
+          <div class=" md:p-4 text-center">
           <!-- <p class="text-white ">Testimonial: {{ testimonial.testimonial }}</p> -->
           <p class=" text-white" >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
@@ -50,4 +50,15 @@ export default defineComponent({
   height: 150px;
   border-radius: 50%;
 }
+@media screen and (max-width: 500) {
+  .avatar {
+  vertical-align: middle;
+  align-content: center;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+  }
+
 </style>
