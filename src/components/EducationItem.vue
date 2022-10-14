@@ -22,7 +22,7 @@
             <p>{{ duration }}</p>
           </div>
           <button @click="showCertificateTriger()"
-          class=" p-4 pl-10 pr-10 m-2 border-gray-400 border-1
+          class=" p-2 md:p-4 pl-4 md:pl-10 pr-4 md:pr-10 m-2 border-gray-400 border-1
           rounded-md bg-transparent hover:font-bold text-white
           hover:bg-white hover:text-darkBlue uppercase">
             Certificate</button>

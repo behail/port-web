@@ -8,7 +8,7 @@ export interface Testimonial {
   id: string;
   name: string;
   contact: string;
-  association:'Colleague' | 'Prevous Colleague' | 'Manager' | 'Prevous Manager';
+  association:'Colleague' | 'Former Colleague' | 'Manager' | 'Former Manager';
   testimonial: string;
   avator?: string;
   social?: Social[];

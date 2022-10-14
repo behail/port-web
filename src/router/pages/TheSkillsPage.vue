@@ -17,23 +17,23 @@
                   </section>
                   <section>
                     <div class="content ml-32">
-                      <h2 class=" bottom-72 md:bottom-auto md:top-48
-                      left-20 md:left-60">
+                      <h2 class=" bottom-72 md:bottom-auto md:top-60
+                      left-20 md:left-72">
                         Vue JS</h2>
-                      <h2 class=" bottom-72 md:bottom-auto md:top-48 left-20 md:left-60">Vue JS</h2>
+                      <h2 class=" bottom-72 md:bottom-auto md:top-60 left-20 md:left-72">Vue JS</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content md:ml-36">
-                      <h2 class=" bottom-60 md:bottom-auto md:top-72 md:left-80">JavaScript</h2>
-                      <h2 class=" bottom-60 md:bottom-auto md:top-72 md:left-80">JavaScript</h2>
+                      <h2 class=" bottom-60 md:bottom-auto md:top-96 md:left-80">JavaScript</h2>
+                      <h2 class=" bottom-60 md:bottom-auto md:top-96 md:left-80">JavaScript</h2>
                     </div>
                   </section>
                   <section>
                     <div class="content md:ml-40">
-                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-96 md:left-60">
+                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-60 md:right-0">
                         Typescript</h2>
-                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-96 md:left-60">
+                      <h2 class=" pr-40 bottom-48 md:bottom-auto md:top-60 md:right-0">
                         Typescript</h2>
                     </div>
                   </section>

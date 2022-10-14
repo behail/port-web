@@ -1,6 +1,6 @@
 <template>
   <section class=" bg-pinksh rounded-r-md">
-    <form @submit.prevent="submitHandler" class="w-21 md:w-43 p-3" >
+    <form @submit.prevent="submitHandler" class="w-19 md:w-43 p-3" >
       <div class="md:flex md:items-center justify-start mt-0 md:mt-6">
         <div class="text-white text-md md:text-xl font-light md:font-semibold p-1 mr-1">
           <label for="first-name" >First Name</label>

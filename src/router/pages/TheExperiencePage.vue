@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 m-auto md:m-12 mt-8 lg:ml-72 md:ml-40">
-    <section class="experience-item" v-for="Expereince in Expereinces" :key="Expereince.id">
+    <section  v-for="Expereince in Expereinces" :key="Expereince.id">
       <ExpereinceItem :ExpereinceItem="Expereince"/>
     </section>
   </div>
@@ -226,11 +226,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-/* .experience {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-} */
-</style>

@@ -1,7 +1,7 @@
 <template>
     <the-card>
       <div class="flip-card w-72 sm:w-80 md:w-96 h-80 bg-transparent drop-shadow-md
-      border-1 border-gray-400 rounded-md m-2 md:m-4">
+      border-1 border-gray-400 rounded-md m-2 md:m-4 md:mt-1">
         <div class="flip-card-inner relative w-full h-full text-center ">
           <div class="flip-card-front absolute w-full h-full bg-transparent text-white rounded-md
           ">

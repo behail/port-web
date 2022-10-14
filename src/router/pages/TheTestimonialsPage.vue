@@ -1,10 +1,11 @@
 <template>
   <Carousel  :breakpoints="breakpoints"
-  class="w-80 md:w-70 ml-0 md:ml-32 mt-10 md:mt-36 h-full"
+  class="w-80 md:w-70 ml-0 md:ml-32 mt-10 md:mt-36 h-auto
+  hover:border-1 hover:border-white hover:rounded-md"
   :autoplay="4000" :itemsToShow="1.5" :wrap-around="true"
   :pauseAutoplayOnHover="true"
      >
-        <Slide class="slide" v-for="Testimonial in Testimonials" :key="Testimonial.id">
+        <Slide v-for="Testimonial in Testimonials" :key="Testimonial.id">
           <TestimonialsItem :testimonial="Testimonial" />
         </Slide>
   </Carousel>
@@ -29,7 +30,7 @@ export default defineComponent({
       name: 'Melaku Asefa',
       contact: 'melaku@uplancer.io',
       association: 'Colleague',
-      testimonial: 'He is Excellent',
+      testimonial: 'I’m an Experienced Full Stack web developer. I know Behailu since 2015 He is one of the deciplined hard worker coulluege that I have know in my career. He is a quick learner, determined to achieve the the goal of the company. I had a chance to work with him on-site and remote. He was honest and responsive, good on communicating with the team.',
       avator: require('../../assets/icons/mele.jpeg'),
       social: [
         {
@@ -67,8 +68,13 @@ export default defineComponent({
       id: uuidv4(),
       name: 'Fasil Endalikachew',
       contact: 'sonofendalkachew@gmail.com',
-      association: 'Colleague',
-      testimonial: 'He is Excellent',
+      association: 'Former Colleague',
+      testimonial: `
+      I’m an Experienced Software Engineer with Master's degree in computer engineering.
+
+I know Behailu since 2015 , we were colleuge and I know him he is a hard worker, team player and self-motivated. 
+I had an opportunity to work with him at two different companies and am amazed by his dedication and motivation. I’m confident he is competent for any challenge in the development world.  
+      `,
       avator: require('../../assets/icons/fasil.jpeg'),
       social: [
         {
@@ -87,8 +93,15 @@ export default defineComponent({
       id: uuidv4(),
       name: 'Tedla Ababu',
       contact: 'abc_all_over_africa@yahoo.com',
-      association: 'Prevous Manager',
-      testimonial: 'He is Excellent',
+      association: 'Former Colleague',
+      testimonial: `
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
+            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
+            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
+            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
+            explicabo.
+      `,
       avator: require('../../assets/icons/td.jpeg'),
       social: [
         {
@@ -107,8 +120,13 @@ export default defineComponent({
       id: uuidv4(),
       name: 'Thomas Koepkae',
       contact: 'thomas.koepke@gmail.com',
-      association: 'Prevous Manager',
-      testimonial: 'He is Excellent',
+      association: 'Former Colleague',
+      testimonial: `I’m a General Manager at Fosera Manufacturing. 
+      I know Behailu when he work as a production Manager. 
+      He has displayed a level of technical understanding, 
+      detail-love and analytical thinking. He has the for us 
+      Important ability of self motivation and self-organization and has 
+      demonstrated quick apprehension and ability to learn new topics.`,
       avator: require('../../assets/icons/tom.jpeg'),
       social: [
         {
