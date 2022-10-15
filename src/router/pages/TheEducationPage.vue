@@ -1,6 +1,6 @@
 <template>
-   <div>
-     <section  v-for="Education in EducationData" :key="Education.id">
+   <div class=" p-2 ">
+     <section class="max-w-screen"  v-for="Education in EducationData" :key="Education.id">
        <EducationItem :educationProps="Education"/>
      </section>
    </div>

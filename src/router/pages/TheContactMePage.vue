@@ -1,6 +1,6 @@
 <template>
   <section class=" border-1 border-gray-400 block md:flex md:justify-between rounded-md
-   mt-2 md:mt-20 ml-0  md:ml-40 drop-shadow-lg">
+   mt-2 md:mt-14 ml-0  md:ml-40 drop-shadow-lg">
     <div class="p-1 md:p-2 pb-2 md:pb-4 w-2/2 md:w-1/2 ">
       <h3 class=" uppercase font-bold text-2xl m-2 md:m-10">Contact Me!</h3>
       <div class=" mt-5 md:mt-32 text-sm md:text-3xl">

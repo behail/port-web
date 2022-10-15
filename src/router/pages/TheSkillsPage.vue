@@ -120,6 +120,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+*{
+  overflow-x: hidden;
+}
   .content {
     /* position: absolute; */
     width: 100%;

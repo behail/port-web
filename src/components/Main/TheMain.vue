@@ -7,7 +7,7 @@
   <router-link to="/testimonials">Testimonials</router-link>
 </template> -->
 
-<script lang="ts">
+<!-- <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({});
@@ -17,4 +17,4 @@ export default defineComponent({});
 a {
   margin: auto 1rem;
 }
-</style>
+</style> -->

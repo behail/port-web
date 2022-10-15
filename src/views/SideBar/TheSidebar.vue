@@ -1,31 +1,31 @@
 <template>
-  <div>
-    <button id="humbrder-btn" v-if="!showSideBar" @click="openSidebar()"
+  <div class=" z-20">
+    <button id="humbrder-btn" v-show="!showSideBar" @click="openSidebar()"
     class=" humbrder-icon text-3xl m-2 top-0 ">&#9776;</button>
-    <button @click="closeSideBar()" v-else class=" text-2xl m-4 top-2 font-bold">X
-    </button>
+    <button @click="closeSideBar()" v-show="showSideBar"
+    class=" text-2xl mx-4 mt-1 top-2 font-bold">X</button>
     <div class="the-sidebar hidden md:block" id="side-bar">
       <router-link to="/" @click="showSideBar?closeSideBar():null">
-        <em class="fa fa-home text-lg md:text-3xl"></em>
+        <em class="fa fa-home text-2xl md:text-3xl"></em>
         <span class=" font-bold text-xs md:text-sm">Home</span>
       </router-link>
       <router-link to="/education" class="sideBarText" @click="showSideBar?closeSideBar():null">
-        <em class='fas fa-graduation-cap text-lg md:text-2xl'></em>
+        <i class="fa fa-graduation-cap text-xl md:text-2xl" aria-hidden="true"></i>
         <span class="font-bold text-xs md:text-sm">Education</span></router-link>
 
       <router-link to="/experience" class="sideBarText" @click="showSideBar?closeSideBar():null">
-        <i class="fa fa-line-chart text-lg md:text-2xl" aria-hidden="true"></i>
+        <i class="fa fa-line-chart text-xl md:text-2xl" aria-hidden="true"></i>
         <span class=" font-bold text-xs md:text-sm" >Experience</span></router-link>
 
       <router-link to="/skills" class="sideBarText" @click="showSideBar?closeSideBar():null">
-        <em class="fa fa-cog text-lg md:text-3xl"></em>
+        <em class="fa fa-cog text-2xl md:text-3xl"></em>
         <span class=" font-bold text-xs md:text-sm" >Skills</span></router-link>
       <router-link to="/testimonials" class="sideBarText" @click="showSideBar?closeSideBar():null">
-        <em class='fas fa-user-alt text-lg md:text-3xl'></em>
+        <i class="fa fa-user text-2xl md:text-3xl" aria-hidden="true"></i>
         <span class=" font-bold text-xs md:text-sm">Testimonials</span></router-link>
 
         <router-link to="/contact" class="sideBarText" @click="showSideBar?closeSideBar():null">
-          <i class="fa fa-phone text-lg md:text-3xl" aria-hidden="true"></i>
+          <i class="fa fa-phone text-2xl md:text-3xl" aria-hidden="true"></i>
         <span class=" font-bold text-xs md:text-sm"> Contact Me</span></router-link>
     </div>
 

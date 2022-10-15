@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class=" max-h-screen">
     <the-side-bar></the-side-bar>
     <div>
       <router-view></router-view>
@@ -21,9 +21,10 @@ export default defineComponent({
 body {
   background-color: #1E293B;
   font-family: 'ABeeZee', serif;
+
 }
 #app {
-  font-family: 'ABeeZee',Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: 'ABeeZee', serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

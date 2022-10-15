@@ -100,8 +100,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 .flip-card {
   perspective: 1000px;
+  scrollbar-width: 0px;
 }
 .flip-card-inner {
   transition: transform 0.8s;

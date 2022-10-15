@@ -1,6 +1,6 @@
 <template>
   <Carousel  :breakpoints="breakpoints"
-  class="w-80 md:w-70 ml-0 md:ml-32 mt-10 md:mt-36 h-auto
+  class="w-80 md:w-70 ml-0 md:ml-32 mt-10 md:mt-28 h-auto
   hover:border-1 hover:border-white hover:rounded-md"
   :autoplay="4000" :itemsToShow="1.5" :wrap-around="true"
   :pauseAutoplayOnHover="true"

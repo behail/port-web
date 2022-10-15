@@ -226,3 +226,8 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+*{
+  overflow-x: hidden;
+}
+</style>

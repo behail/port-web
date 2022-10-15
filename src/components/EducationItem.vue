@@ -1,5 +1,5 @@
 <template>
-      <div class=" ml-0 md:ml-40 mt-0 md:mt-4 mb-16 p-2 w-full items-center">
+      <div class=" ml-0 md:ml-20 mt-0 md:mt-4 mb-16 p-2 w-full items-center">
         <div class="flex justify-center p-0 ml-0 md:ml-16 mt-6 mb-4 md:m-4
         border-t-1 border-b-1 border-white">
           <div class=" flex  course-name"
