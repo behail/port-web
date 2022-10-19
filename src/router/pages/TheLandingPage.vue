@@ -14,10 +14,10 @@
             </p>
         </blockquote>
         <div class="flex justify-center md:justify-start w-50 h-auto ml-20 ">
-          <a href="../../assets/pdf/vue_cert.pdf"
+          <a href="../../assets/pdf/BM_CV_Oct.pdf" download
           class="  bg-pinksh text-white font-semibold hover:bg-white hover:text-pinksh
            uppercase px-8 py-2 border-1 border-white rounded-md">
-            Resume</a>
+            Download Resume</a>
         </div>
         <!-- <pdfViewer :fileUrl="`../../assets/pdf/BM_CV_Oct.pdf`" /> -->
         <Carousel :autoplay="4000" :itemsToShow="3" :wrap-around="true"

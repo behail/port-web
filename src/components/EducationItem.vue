@@ -80,6 +80,7 @@ export default defineComponent({
     };
     const duration = computed(() => `${EducationItem.startDate?.getMonth()}/${EducationItem.startDate?.getFullYear()} - 
       ${EducationItem.endDate?.getMonth()}/${EducationItem.endDate?.getFullYear()}`);
+    console.log(EducationItem.name, `${EducationItem.endDate}/`);
     return {
       EducationItem,
       score,

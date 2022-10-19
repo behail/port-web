@@ -4,12 +4,12 @@
     <div class="p-1 md:p-2 pb-2 md:pb-4 w-2/2 md:w-1/2 ">
       <h3 class=" uppercase font-bold text-2xl m-2 md:m-10">Contact Me!</h3>
       <div class=" mt-5 md:mt-32 text-sm md:text-3xl">
-        <em class="fa fa-envelope text-pinksh pr-1 md:pr-5 mr-0 md:mr-2"></em>
+        <em class="fa fa-envelope text-pinksh pr-0 md:pr-3 mr-0"></em>
         <span class="pl-0 ml-1 md:ml-2 p-1 md:p-2 text-white text-xl md:text-3xl">
           angbehailu@gmail.com</span>
-        <p class=" p-1 md:p-2 pl-14 md:pl-24 text-white text-xl md:text-3xl">
-          hbehailu1234@gmail.com</p>
-    </div>
+          <p class=" p-1 md:p-2 pl-14 md:pl-24 text-white text-xl md:text-3xl">
+            hbehailu1234@gmail.com</p>
+      </div>
       <div class=" text-md md:text-3xl mt-2 md:mt-4">
         <i class="fa fa-phone text-pinksh" aria-hidden="true"></i>
           <a class="pl-2 md:pl-6 pr-12 md:pr-20 p-2 text-white text-xl md:text-3xl"

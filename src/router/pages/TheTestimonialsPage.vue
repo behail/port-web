@@ -93,14 +93,14 @@ I had an opportunity to work with him at two different companies and am amazed b
       id: uuidv4(),
       name: 'Tedla Ababu',
       contact: 'abc_all_over_africa@yahoo.com',
-      association: 'Former Colleague',
+      association: 'Former Manager',
       testimonial: `
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
-            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
-            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
-            Iure veritatis aliquid nostrum provident omnis qui fuga amet eos asperiores
-            explicabo.
+      I first met Behailu back in 2015 when we both started working for US-based technology	
+       company in Addis Ababa.  After setting up my own company he joined our team as a system 
+       and software lead. His detail-oriented attitude in the work he does, coupled with. 
+       His meticulous planning ability immensely helped our team deliver on its objectives and 
+       schedule alike. I always admire his will to to learn and how quickly he is able to get 
+       up to speed with whatever he was presented with.
       `,
       avator: require('../../assets/icons/td.jpeg'),
       social: [
@@ -120,7 +120,7 @@ I had an opportunity to work with him at two different companies and am amazed b
       id: uuidv4(),
       name: 'Thomas Koepkae',
       contact: 'thomas.koepke@gmail.com',
-      association: 'Former Colleague',
+      association: 'Former Manager',
       testimonial: `I’m a General Manager at Fosera Manufacturing. 
       I know Behailu when he work as a production Manager. 
       He has displayed a level of technical understanding, 
