@@ -1,6 +1,6 @@
 <template>
     <div class=" bg-white p-0 ml-12 m-2 flex flex-col justify-center align-middle fixed
-     top-6 md:top-8 left-8 md:left-24 drop-shadow-md z-10 rounded-md">
+     top-6 md:top-1 left-8 md:left-24 drop-shadow-md z-10 rounded-md">
         <!-- <iframe :src="fileUrl" class=" h-52 md:h-35 w-72 md:w-70" title="pdf"></iframe> -->
         <img class="top-0 h-52 md:h-35 w-72 md:w-70 "
                    :src="fileUrl" alt="" />
