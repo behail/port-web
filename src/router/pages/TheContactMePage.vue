@@ -1,6 +1,6 @@
 <template>
   <section
-    class="border-1 border-gray-400 block md:flex md:justify-between rounded-md mt-2 md:mt-10 ml-0 md:ml-40 drop-shadow-lg"
+    class="border-1 border-gray-400 block md:flex md:justify-between rounded-md mt-2 md:mt-10 ml-0 md:ml-32 drop-shadow-lg"
   >
     <div class="p-1 md:p-2 pb-2 md:pb-4 w-2/2 md:w-1/2">
       <h3 class="uppercase font-bold text-2xl m-2 md:m-10">Contact Me!</h3>
@@ -58,8 +58,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import TheForm from "@/components/TheForm.vue";
+import { defineComponent } from 'vue';
+import TheForm from '@/components/TheForm.vue';
 
 export default defineComponent({
   components: {
