@@ -1,24 +1,22 @@
 <template>
-    <div></div>
-    <dialog open>
-        <header class=" bg-pinksh">
-            <slot name="header">
-                <h2 class=" uppercase flex justify-center text-3xl">{{title}}</h2>
-            </slot>
-        </header>
-        <section>
-         <slot>
-         </slot>
-        </section>
-        <section>
-          <slot name="action">
-          </slot>
-        </section>
-    </dialog>
+  <div></div>
+  <dialog open>
+    <header class="bg-pinksh">
+      <slot name="header">
+        <h2 class="uppercase flex justify-center text-3xl">{{ title }}</h2>
+      </slot>
+    </header>
+    <section>
+      <slot> </slot>
+    </section>
+    <section>
+      <slot name="action"> </slot>
+    </section>
+  </dialog>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
@@ -42,9 +40,10 @@ div {
 
 dialog {
   position: fixed;
-  top: 10vh;
+  top: 2vh;
   left: 5%;
   width: 90%;
+  height: 97vh;
   z-index: 100;
   border-radius: 12px;
   border: none;
@@ -66,6 +65,7 @@ header h2 {
 
 section {
   padding: 1rem;
+  padding-bottom: 0%;
 }
 
 menu {
