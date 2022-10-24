@@ -2,12 +2,12 @@
   <div>
     <figure class="lg:flex md:p-10 p-0">
       <img
-        class="ml-10 p-2 md:p-12 md:w-37 md:h-30 md:rounded-tr-lg rounded-full w-60 mx-auto mt-0"
+        class="ml-6 p-2 md:p-12 md:w-37 md:h-30 md:rounded-tr-lg rounded-full w-60 mx-auto mt-0"
         src="../../assets/icons/bm1.png"
         alt=""
       />
       <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
-        <blockquote class="p-0 mr-3 pt-0 md:pt-2 pb-2">
+        <blockquote class="p-0 mr-4 pt-0 md:pt-2 pb-10">
           <p class="text-lg font-medium text-white">HI THERE! I'M</p>
           <p class="text-pinksh uppercase italic text-xl pb-4">
             <strong>{{ name }}</strong>
@@ -17,7 +17,7 @@
             interactive applications and experiences on the web.
           </p>
         </blockquote>
-        <div class="flex justify-center md:justify-start w-50 h-auto ml-20">
+        <div class="flex justify-center md:justify-start w-50 h-auto ml-16">
           <a
             href="../../assets/pdf/BM_CV_Oct.pdf"
             download
@@ -35,7 +35,7 @@
           :wrap-around="true"
           class="px-4 w-72 md:w-96 pt-12"
         >
-          <Slide class="p-2 pl-5" v-for="item in items" :key="item.title">
+          <Slide class="p-2 pl-4" v-for="item in items" :key="item.title">
             <img
               class="rounded-full w-5 md:w-10 h-5 md:h-10 p-1"
               :src="item.icon"
@@ -58,12 +58,12 @@
     </figure>
 
     <div
-      class="text-white flex flex-row justify-center items-center bottom-0 w-full mt-0 md:mt-0"
+      class="text-white flex flex-row justify-center items-center bottom-0 w-full mt-6 md:mt-0"
     >
       <p class="uppercase text-xs text-slate-500 italic">Reach out to me on</p>
       <a
-        class="pl-2 uppercase font-light text-gray-400 text-sm underline hover:text-pinksh
-        ease-in duration-100"
+        class=" uppercase font-light text-gray-400 text-sm underline hover:text-pinksh
+        ease-in duration-100 pl-2"
         v-for="social in socials"
         :key="social"
         :href="social.url"
