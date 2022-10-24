@@ -42,9 +42,9 @@ div {
 
 dialog {
   position: fixed;
-  top: 5vh;
-  left: 10%;
-  width: 100%;
+  top: 10vh;
+  left: 5%;
+  width: 90%;
   z-index: 100;
   border-radius: 12px;
   border: none;
