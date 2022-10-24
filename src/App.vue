@@ -14,10 +14,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheSideBar from '@/views/SideBar/TheSidebar.vue';
-import TheMain from '@/components/Main/TheMain.vue';
 
 export default defineComponent({
-  components: { TheSideBar, TheMain },
+  components: { TheSideBar },
 });
 </script>
 <style>

@@ -27,9 +27,21 @@
           hover:bg-white hover:text-darkBlue uppercase ease-in duration-150">
             Certificate</button>
             <teleport to="body">
-              <div class=" bg-slate-100" v-if="showCertificate">
+              <!-- <div class=" bg-slate-100" v-if="showCertificate">
                 <pdfViewer @colse-modal="colseModal()" :fileUrl="EducationItem.file" />
-              </div>
+              </div> -->
+              <the-modal v-if="showCertificate" :title="`Certificate`">
+                <template #default>
+                  <!-- <pdfViewer @colse-modal="colseModal()" :fileUrl="EducationItem.file" /> -->
+                <img :src="EducationItem.file" :alt="EducationItem.name" />
+                </template>
+                <template #action>
+                  <button @click="colseModal()"
+                  class=" p-2 md:p-6 pt-1 md:pt-2 pb-1 md:pb-2 border-2 m-2 mr-3 ml-auto items-end
+                border-darkBlue rounded-md hover:bg-pinksh hover:border-white hover:text-white">
+                Close</button>
+                </template>
+              </the-modal>
             </teleport>
         </div>
       </div>
@@ -42,10 +54,13 @@ import {
 } from 'vue';
 import Education from '@/types/Education';
 import pdfViewer from './pdfViewer.vue';
+import TheModal from '@/views/Modal/TheModal.vue';
 
 export default defineComponent({
   components: {
     pdfViewer,
+    TheModal,
+
   },
   props: {
     educationProps: {
