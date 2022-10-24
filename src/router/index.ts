@@ -1,46 +1,43 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import TheLandingPage from "./pages/TheLandingPage.vue";
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import TheLandingPage from './pages/TheLandingPage.vue';
+
+const ContactMePage = () => import('./pages/TheContactMePage.vue');
+const EducationPage = () => import('./pages/TheEducationPage.vue');
+const ExperiencePage = () => import('./pages/TheExperiencePage.vue');
+const SkillsPage = () => import('./pages/TheSkillsPage.vue');
+const TestimonialsPage = () => import('./pages/TheTestimonialsPage.vue');
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: TheLandingPage,
   },
   {
-    path: "/contact",
-    name: "contact",
-    //Lazy Loading Routes
-    component: () =>
-      import(/* webpackChunkName: "contact" */ "./pages/TheContactMePage.vue"),
+    path: '/contact',
+    name: 'contact',
+    // Lazy Loading Routes
+    component: ContactMePage,
   },
   {
-    path: "/education",
-    name: "education",
-    component: () =>
-      import(/* webpackChunkName: "education"*/ "./pages/TheEducationPage.vue"),
+    path: '/education',
+    name: 'education',
+    component: EducationPage,
   },
   {
-    path: "/experience",
-    name: "experience",
-    component: () =>
-      import(
-        /* webpackChunkName: "experience"*/ "./pages/TheExperiencePage.vue"
-      ),
+    path: '/experience',
+    name: 'experience',
+    component: ExperiencePage,
   },
   {
-    path: "/skills",
-    name: "skills",
-    component: () =>
-      import(/* webpackChunkName: "skills" */ "./pages/TheSkillsPage.vue"),
+    path: '/skills',
+    name: 'skills',
+    component: SkillsPage,
   },
   {
-    path: "/testimonials",
-    name: "testimonials",
-    component: () =>
-      import(
-        /* webpackChunkName: "testimonials" */ "./pages/TheTestimonialsPage.vue"
-      ),
+    path: '/testimonials',
+    name: 'testimonials',
+    component: TestimonialsPage,
   },
 ];
 

@@ -7,7 +7,7 @@
         </div>
         <div class=" md:w-25">
           <input class=" w-full rounded-md p-1 md:p-2 mt-0 m-1 md:m-2
-          hover:bg-sky-200 focus:outline-none
+          hover:bg-sky-200 focus:outline-none ease-in duration-150
           focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-md md:text-lg"
           type="text" id="first-name" name="first-name" placeholder="Your name.."
             v-model="firstName">
@@ -19,20 +19,21 @@
         </div>
         <div class=" md:w-25">
           <input class=" w-full rounded-md p-1 md:p-2 mt-0 m-1 md:m-2 hover:bg-sky-200
-          focus:outline-none
+          focus:outline-none ease-in duration-150
           focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-lg"
            type="text" id="last-name" name="last-name" placeholder="Your last name.."
           v-model="lastName">
         </div>
       </div>
       <div class="md:flex items-center justify-end mt-4 md:mt-2 md:mr-14">
-        <div class="text-white font-semibold text-xl p-1">
+        <div class="text-white font-semibold text-xl p-1 ease-in duration-150">
           <label for="user-name" class="text-white">Email</label>
         </div>
         <div class="md:w-25">
           <input class=" w-full rounded-md p-1 md:p-2 mt-0 m-1 md:m-2 hover:bg-sky-200
           focus:outline-none
-          focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-lg"
+          focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-lg
+          ease-in duration-150"
            type="text" id="user-name" name="email" placeholder="emal@address.com"
           v-model="userName">
         </div>
@@ -44,7 +45,8 @@
         <div class="md:w-25">
           <textarea class=" w-full rounded-md p-1 md:p-2 mt-0 m-1 md:m-2 resize-none
           hover:bg-sky-200 focus:outline-none
-          focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-lg"
+          focus:ring-1 focus:ring-sky-200 focus:border-sky-200 text-darkBlue text-lg
+          ease-in duration-150"
           id="message" name="message" placeholder="Write your message here.."
           v-model="message"
           style="height:200px"></textarea>
@@ -53,7 +55,7 @@
       <br class="hidden md:block">
         <button class="p-3 pl-10 md:pl-52 pr-10 md:pr-52 rounded-md drop-shadow-md md:m-2
         hover:bg-darkBlue bg-pinksh border-white border-2 hover:border-transparent text-white
-          uppercase text-lg font-semibold">Send</button>
+          uppercase text-lg font-semibold ease-in duration-150">Send</button>
   </form>
   </section>
 </template>

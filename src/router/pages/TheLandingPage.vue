@@ -21,7 +21,9 @@
           <a
             href="../../assets/pdf/BM_CV_Oct.pdf"
             download
-            class="bg-pinksh text-white font-semibold hover:bg-white hover:text-pinksh uppercase px-8 py-2 border-1 border-white rounded-md"
+            class="bg-pinksh text-white font-semibold hover:bg-white
+            hover:text-pinksh uppercase px-8 py-2 border-1 border-white rounded-md
+            ease-in duration-150"
           >
             Download Resume</a
           >
@@ -60,7 +62,8 @@
     >
       <p class="uppercase text-xs text-slate-500 italic">Reach out to me on</p>
       <a
-        class="pl-2 uppercase font-light text-gray-400 text-sm underline hover:text-pinksh"
+        class="pl-2 uppercase font-light text-gray-400 text-sm underline hover:text-pinksh
+        ease-in duration-100"
         v-for="social in socials"
         :key="social"
         :href="social.url"
@@ -73,43 +76,43 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { Carousel, Slide } from "vue3-carousel";
+import { defineComponent, ref } from 'vue';
+import { Carousel, Slide } from 'vue3-carousel';
 // import pdfViewer from '../../components/pdfViewer.vue';
-import "vue3-carousel/dist/carousel.css";
+import 'vue3-carousel/dist/carousel.css';
 
 export default defineComponent({
-  name: "Auto-play",
+  name: 'Auto-play',
   components: {
     Carousel,
     Slide,
     // pdfViewer,
   },
   setup() {
-    const name = ref("Behailu Mesganaw");
-    const profession = ref("Frontend Web Developer");
+    const name = ref('Behailu Mesganaw');
+    const profession = ref('Frontend Web Developer');
     const topSkills = ref<string[]>([
-      "ReactJs",
-      "VueJs",
-      "Typescript",
-      "HTML5",
-      "TailWind",
+      'ReactJs',
+      'VueJs',
+      'Typescript',
+      'HTML5',
+      'TailWind',
     ]);
     const socials = ref<object[]>([
       {
-        url: "https://www.linkedin.com/in/behailu-mesganaw-706390118",
-        name: "Linkdin",
+        url: 'https://www.linkedin.com/in/behailu-mesganaw-706390118',
+        name: 'Linkdin',
       },
-      { url: "https://github.com/behail", name: "Github" },
+      { url: 'https://github.com/behail', name: 'Github' },
     ]);
-    const imageSrc: string = "../../assets/icons/css.png";
+    const imageSrc: string = '../../assets/icons/css.png';
     const items = [
-      { title: "Vue", icon: require("../../assets/icons/vue.png") },
-      { title: "React", icon: require("../../assets/icons/react.png") },
-      { title: "TypeScript", icon: require("../../assets/icons/ts.png") },
-      { title: "JavaScript", icon: require("../../assets/icons/js.png") },
-      { title: "HTML", icon: require("../../assets/icons/html.png") },
-      { title: "CSS", icon: require("../../assets/icons/css.png") },
+      { title: 'Vue', icon: require('../../assets/icons/vue.png') },
+      { title: 'React', icon: require('../../assets/icons/react.png') },
+      { title: 'TypeScript', icon: require('../../assets/icons/ts.png') },
+      { title: 'JavaScript', icon: require('../../assets/icons/js.png') },
+      { title: 'HTML', icon: require('../../assets/icons/html.png') },
+      { title: 'CSS', icon: require('../../assets/icons/css.png') },
     ];
     return {
       name,
@@ -122,3 +125,17 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.download-resume{
+  animation: fade-out 0.5 ease-out ;
+
+}
+@keyframes fade-out {
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+</style>

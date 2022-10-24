@@ -24,7 +24,7 @@
           <button @click="showCertificateTriger()"
           class=" p-2 md:p-4 pl-4 md:pl-10 pr-4 md:pr-10 m-2 border-gray-400 border-1
           rounded-md bg-transparent hover:font-bold text-white
-          hover:bg-white hover:text-darkBlue uppercase">
+          hover:bg-white hover:text-darkBlue uppercase ease-in duration-150">
             Certificate</button>
             <teleport to="body">
               <div class=" bg-slate-100" v-if="showCertificate">
@@ -80,7 +80,6 @@ export default defineComponent({
     };
     const duration = computed(() => `${EducationItem.startDate?.getMonth()}/${EducationItem.startDate?.getFullYear()} - 
       ${EducationItem.endDate?.getMonth()}/${EducationItem.endDate?.getFullYear()}`);
-    console.log(EducationItem.name, `${EducationItem.endDate}/`);
     return {
       EducationItem,
       score,

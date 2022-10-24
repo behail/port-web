@@ -2,8 +2,11 @@
   <section class=" max-h-screen">
     <the-side-bar></the-side-bar>
     <div>
-      <router-view></router-view>
-      <the-main></the-main>
+      <router-view v-slot="slotProps">
+        <transition name="route" mode="out-in">
+          <component :is="slotProps.Component"></component>
+        </transition>
+      </router-view>
     </div>
   </section>
 </template>
@@ -24,7 +27,6 @@ body {
 
 }
 #app {
-  /* font-family: 'ABeeZee', serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -33,16 +35,35 @@ body {
 section {
   display: flex;
 }
-/* nav {
-  padding: 30px;
-} */
+.route-enter-active{
+  animation: fadeIn 1s ease-in;
 
-/* nav a {
-  font-weight: bold;
-  color: #2c3e50;
-} */
+}
+.route-leave-active{
+  animation: moveUp 1s ease-out;
 
-/* nav a.router-link-exact-active {
-  color: #42b983;
-} */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0px);
+    scale: 1;
+    opacity: 1;
+  }
+  to{
+    transform: translateY(-400px);
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
 </style>

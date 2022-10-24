@@ -1,7 +1,7 @@
 <template>
     <div class="w-41 h-full h-min-96 m-2 p-2 md:p-4 border-1 border-gray-400 rounded-md
      drop-shadow-2xl bg-transparent  hover:border-1 hover:drop-shadow-2xl hover:border-white
-     hover:bg-sky-900 ">
+     hover:bg-sky-900 ease-in duration-150 ">
     <img :src="testimonial.avator" alt="Avatar" class="avatar">
           <h2 class=" uppercase font-bold p-3 text-2xl">{{ testimonial.name }}</h2>
           <h3 class=" uppercase text-blue-300  font-bold text-sm">{{ testimonial.association }}</h3>
