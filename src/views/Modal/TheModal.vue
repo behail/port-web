@@ -81,4 +81,10 @@ menu {
     width: 40rem;
   }
 }
+@media (max-width: 1240px) {
+  dialog {
+    height: 85vh;
+    top: 4vh;
+  }
+}
 </style>
