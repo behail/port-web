@@ -54,7 +54,7 @@ export default defineComponent({
         detail: 'BSc. In Electrical and Computer Engineering',
         institution: 'Bahir Dar University',
         type: 'Degree',
-        file: require('../../assets/img/degree.png'),
+        file: 'https://lh3.googleusercontent.com/ZwEtXmbboCrIXa01meemLMpb-RWosh1PDs_yF5qih9u_2YL9riwGbXA-xJM5qM4beHk=w2400',
         startDate: new Date('10-10-2010'),
         endDate: new Date('6-29-2015'),
         gpa: 3.6,

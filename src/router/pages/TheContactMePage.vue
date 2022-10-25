@@ -51,7 +51,7 @@
         </div>
         <div>
           <a
-            href="http://t.me/@hbehaylu"
+            href="https://t.me/hbehaylu"
             target="blank"
           >
             <em class="fab fa-telegram pl-4 text-2xl hover:text-white ease-in duration-100"></em

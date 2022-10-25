@@ -2,8 +2,8 @@
   <div>
     <figure class="lg:flex md:p-10 p-0">
       <img
-        class="ml-6 p-2 md:p-12 md:w-37 md:h-30 md:rounded-tr-lg rounded-full w-60 mx-auto mt-0"
-        src="../../assets/icons/bm1.png"
+        class="ml-6 p-2 md:p-12 md:w-37 md:h-30  rounded-full w-60 mx-auto mt-0"
+        src="https://lh5.googleusercontent.com/ACRzPIluAc9Su2E5KeBThAlR8SXmzNoZ8dXpnu8H8yPCqsQXF8WOSUysfR5-qKQUQdY=w2400"
         alt=""
       />
       <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
@@ -18,15 +18,25 @@
           </p>
         </blockquote>
         <div class="flex justify-center md:justify-start w-50 h-auto ml-16">
-          <a
-            href="../../assets/pdf/BM_CV_Oct.pdf"
-            download
-            class="bg-pinksh text-white font-semibold hover:bg-white
+          <button class="bg-pinksh text-white font-semibold hover:bg-white
             hover:text-pinksh uppercase px-8 py-2 border-1 border-white rounded-md
-            ease-in duration-150"
-          >
-            Download Resume</a
-          >
+            ease-in duration-150" @click="showResume = true">Resume</button>
+         <the-modal v-if="showResume" :title="`Resume`" >
+           <template #default>
+             <iframe title="resume"
+               src="https://drive.google.com/file/d/13dwEWvuH4bb2Okxwqd6Vpdm5g3ow-rNi/preview"
+                allow="autoplay"
+                class=" w-full"
+                target="blank"
+              ></iframe>
+           </template>
+           <template #action>
+             <button @click="showResume = false"
+             class="bg-pinksh text-white font-semibold hover:bg-white
+             hover:text-pinksh uppercase px-8 py-2 border-1 border-pinksh rounded-md
+             ease-in duration-150 ">Close</button>
+           </template>
+        </the-modal>
         </div>
         <Carousel
           :autoplay="4000"
@@ -81,12 +91,14 @@ import { defineComponent, ref } from 'vue';
 import { Carousel, Slide } from 'vue3-carousel';
 // import pdfViewer from '../../components/pdfViewer.vue';
 import 'vue3-carousel/dist/carousel.css';
+import TheModal from '@/views/Modal/TheModal.vue';
 
 export default defineComponent({
   name: 'Auto-play',
   components: {
     Carousel,
     Slide,
+    TheModal,
     // pdfViewer,
   },
   setup() {
@@ -115,6 +127,7 @@ export default defineComponent({
       { title: 'CSS', icon: 'fab fa-css3', bgColor: '#264de4' },
     ];
     const typescript = require('../../assets/icons/ts.png');
+    const showResume = ref<boolean>(false);
     return {
       name,
       profession,
@@ -122,7 +135,21 @@ export default defineComponent({
       socials,
       items,
       typescript,
+      showResume,
     };
   },
 });
 </script>
+
+<style scoped>
+iframe{
+  height: 75vh;
+}
+
+@media (max-width: 768px)  {
+  iframe{
+  height: 63vh;
+}
+
+}
+</style>
