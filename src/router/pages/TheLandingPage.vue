@@ -8,7 +8,7 @@
       />
       <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
         <blockquote class="p-0 mr-4 pt-0 md:pt-2 pb-10">
-          <p class="text-lg font-medium text-white">HI THERE! I'M</p>
+          <p class="text-lg font-medium text-white">HELLO! I'M</p>
           <p class="text-pinksh uppercase italic text-xl pb-4">
             <strong>{{ name }}</strong>
           </p>

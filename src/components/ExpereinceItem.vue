@@ -32,12 +32,12 @@
             </div>
             <div class="bg-pinksh flex items-start justify-between pl-2 pr-2 p-0 m-0 mt-8 mb-3">
               <p class="text-darkBlue border-r-4 p-2 text-base md:text-xl uppercase font-bold">
-                Projects</p>
+                {{projectTitle}}</p>
               <div class="flex flex-col justify-start items-start p-3 text-sm font-semibold
                md:text-lg">
                 <div  v-for="project in ExpereinceData.project"
                 :key="project?.id">
-                    <h4>{{ project?.name }}</h4>
+                    <h4 v-if="project?.name">{{`>> ${project?.name}` }}</h4>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@
   </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive, ref } from 'vue';
 import { Expereince, Skill, Project } from '@/types/Expereince';
 import GoogleChart from '@/components/GoogleChart.vue';
 
@@ -93,8 +93,14 @@ export default defineComponent({
     });
     const startDate = `${ExpereinceData.startDate.getMonth()}-${ExpereinceData.startDate.getFullYear()}`;
     const enddate = props.ExpereinceItem.currentlyWorking ? 'Present' : `${props.ExpereinceItem?.enddate?.getMonth()}-${props.ExpereinceItem?.enddate?.getFullYear()}`;
+    const projectTitle = ref< string>();
+    if (ExpereinceData.project[1]?.name !== undefined) {
+      projectTitle.value = 'Projects';
+    } else { projectTitle.value = 'Project'; }
 
-    return { ExpereinceData, startDate, enddate };
+    return {
+      ExpereinceData, startDate, enddate, projectTitle,
+    };
   },
 });
 </script>
