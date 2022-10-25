@@ -16,10 +16,6 @@
       <router-link to="/experience" class="sideBarText" @click="showSideBar?closeSideBar():null">
         <i class="fa fa-line-chart text-xl md:text-2xl" aria-hidden="true"></i>
         <span class=" font-bold text-xs md:text-sm" >Experience</span></router-link>
-
-      <!-- <router-link to="/skills" class="sideBarText" @click="showSideBar?closeSideBar():null">
-        <em class="fa fa-cog text-2xl md:text-3xl"></em>
-        <span class=" font-bold text-xs md:text-sm" >Skills</span></router-link> -->
       <router-link to="/testimonials" class="sideBarText" @click="showSideBar?closeSideBar():null">
         <i class="fa fa-user text-2xl md:text-3xl" aria-hidden="true"></i>
         <span class=" font-bold text-xs md:text-sm">Testimonials</span></router-link>
@@ -56,7 +52,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+.active-route {
+  background: white;
+}
 .the-sidebar{
     padding-top: 17%;
     padding-left: 1%;

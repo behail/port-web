@@ -29,7 +29,7 @@
             <teleport to="body">
               <the-modal v-if="showCertificate" :title="`Certificate`">
                 <template #default>
-                <img :src="EducationItem.file" :alt="EducationItem.name" />
+                <img :src="EducationItem.file" :alt="EducationItem.name" class=" h-61" />
                 </template>
                 <template #action>
                   <button @click="colseModal()"
