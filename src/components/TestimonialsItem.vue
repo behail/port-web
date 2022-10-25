@@ -5,18 +5,19 @@
     <img :src="testimonial.avator" alt="Avatar" class="avatar">
           <h2 class=" uppercase font-bold p-3 text-2xl">{{ testimonial.name }}</h2>
           <h3 class=" uppercase text-blue-300  font-bold text-sm">{{ testimonial.association }}</h3>
-          <div class=" md:p-4 text-center">
-          <p class="text-white ">{{ testimonial.testimonial }}</p>
-          </div>
-          <div class=" flex justify-center items-center">
-           <a target="blank" href="https://mail.google.com/" class="text-blue-300 italic">
-            {{ testimonial.contact }}
-          </a>
+          <div class=" flex justify-center items-center mb-4">
+            <a target="blank" href="https://mail.google.com/" class="text-blue-300 italic">
+              {{ testimonial.contact }}
+            </a>
             <div v-for="Social in testimonial.social" :key="Social.id">
               <a target="blank" v-if="Social.name === 'Linkdin'" :href="Social.url ">
                 <em class="fa fa-linkedin text-md pl-2"></em></a>
             </div>
           </div>
+          <div class=" md:p-4 text-center">
+               <p class="text-white ">{{ testimonial.testimonial }}</p>
+          </div>
+
     </div>
 
   </template>

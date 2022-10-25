@@ -27,12 +27,8 @@
           hover:bg-white hover:text-darkBlue uppercase ease-in duration-150">
             Certificate</button>
             <teleport to="body">
-              <!-- <div class=" bg-slate-100" v-if="showCertificate">
-                <pdfViewer @colse-modal="colseModal()" :fileUrl="EducationItem.file" />
-              </div> -->
               <the-modal v-if="showCertificate" :title="`Certificate`">
                 <template #default>
-                  <!-- <pdfViewer @colse-modal="colseModal()" :fileUrl="EducationItem.file" /> -->
                 <img :src="EducationItem.file" :alt="EducationItem.name" />
                 </template>
                 <template #action>

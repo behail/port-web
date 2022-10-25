@@ -143,7 +143,7 @@ export default defineComponent({
 
 <style scoped>
 iframe{
-  height: 75vh;
+  height: 70vh;
 }
 
 @media (max-width: 768px)  {

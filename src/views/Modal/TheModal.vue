@@ -43,7 +43,7 @@ dialog {
   top: 2vh;
   left: 5%;
   width: 90%;
-  height: 97vh;
+  height: 90vh;
   z-index: 100;
   border-radius: 12px;
   border: none;
