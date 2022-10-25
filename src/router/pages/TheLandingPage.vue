@@ -28,7 +28,6 @@
             Download Resume</a
           >
         </div>
-        <!-- <pdfViewer :fileUrl="`../../assets/pdf/BM_CV_Oct.pdf`" /> -->
         <Carousel
           :autoplay="4000"
           :itemsToShow="3"
@@ -36,10 +35,12 @@
           class="px-4 w-72 md:w-96 pt-12"
         >
           <Slide class="p-2 pl-4" v-for="item in items" :key="item.title">
-            <img
-              class="rounded-full w-5 md:w-10 h-5 md:h-10 p-1"
-              :src="item.icon"
-              alt="vue.js"
+            <em v-if="item.icon !== ''" class="rounded-full p-1 text-3xl"
+             :class='item.icon' :style="{color: item.bgColor}"></em>
+              <img v-else
+              class="rounded-full w-10 h-10 p-1"
+              :src="typescript"
+              alt="Typescript"
             />
             <p class="text-white text-sm pr-3">{{ item.title }}</p>
           </Slide>
@@ -105,37 +106,23 @@ export default defineComponent({
       },
       { url: 'https://github.com/behail', name: 'Github' },
     ]);
-    const imageSrc: string = '../../assets/icons/css.png';
     const items = [
-      { title: 'Vue', icon: require('../../assets/icons/vue.png') },
-      { title: 'React', icon: require('../../assets/icons/react.png') },
-      { title: 'TypeScript', icon: require('../../assets/icons/ts.png') },
-      { title: 'JavaScript', icon: require('../../assets/icons/js.png') },
-      { title: 'HTML', icon: require('../../assets/icons/html.png') },
-      { title: 'CSS', icon: require('../../assets/icons/css.png') },
+      { title: 'Vue', icon: 'fab fa-vuejs', bgColor: '#41B883' },
+      { title: 'React', icon: 'fab fa-react', bgColor: '#61DBFB' },
+      { title: 'TypeScript', icon: '', bgColor: '' },
+      { title: 'JavaScript', icon: 'fab fa-js-square', bgColor: '#F0DB4F' },
+      { title: 'HTML', icon: 'fab fa-html5', bgColor: '#e34c26' },
+      { title: 'CSS', icon: 'fab fa-css3', bgColor: '#264de4' },
     ];
+    const typescript = require('../../assets/icons/ts.png');
     return {
       name,
       profession,
       topSkills,
       socials,
-      imageSrc,
       items,
+      typescript,
     };
   },
 });
 </script>
-<style scoped>
-.download-resume{
-  animation: fade-out 0.5 ease-out ;
-
-}
-@keyframes fade-out {
-    from {
-      opacity: 0;
-    }
-    to{
-      opacity: 1;
-    }
-  }
-</style>

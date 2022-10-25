@@ -1,5 +1,5 @@
 <template>
-      <div class=" ml-0 mr-8 md:ml-20 mt-0 md:mt-4 mb-16 p-0 w-full items-center">
+      <div class=" ml-0 mr-8 md:ml-40 mt-0 md:mt-4 mb-16 p-0 w-full items-center">
         <div class="flex justify-center p-0 ml-0 md:ml-16 mt-6 mb-4 md:m-4
         border-t-1 border-b-1 border-white">
           <div class=" flex  course-name"
@@ -37,7 +37,7 @@
                 </template>
                 <template #action>
                   <button @click="colseModal()"
-                  class=" p-2 md:p-6 pt-1 md:pt-2 pb-1 md:pb-2 border-2 m-2 mr-3 ml-auto items-end
+                  class=" p-2 md:p-6 pt-1 md:pt-2 pb-1 md:pb-2 border-2 m-2  ml-auto items-end
                 border-darkBlue rounded-md hover:bg-pinksh hover:border-white hover:text-white">
                 Close</button>
                 </template>
@@ -53,12 +53,12 @@ import {
   defineComponent, reactive, ref,
 } from 'vue';
 import Education from '@/types/Education';
-import pdfViewer from './pdfViewer.vue';
+// import pdfViewer from './pdfViewer.vue';
 import TheModal from '@/views/Modal/TheModal.vue';
 
 export default defineComponent({
   components: {
-    pdfViewer,
+    // pdfViewer,
     TheModal,
 
   },

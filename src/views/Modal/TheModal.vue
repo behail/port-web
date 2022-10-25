@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -81,7 +81,7 @@ menu {
     width: 40rem;
   }
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   dialog {
     height: 85vh;
     top: 4vh;

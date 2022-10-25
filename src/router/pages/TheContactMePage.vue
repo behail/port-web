@@ -49,9 +49,16 @@
             <em class="fa fa-twitter pl-4 text-2xl hover:text-white ease-in duration-100"></em
           ></a>
         </div>
+        <div>
+          <a
+            href="http://t.me/@hbehaylu"
+            target="blank"
+          >
+            <em class="fab fa-telegram pl-4 text-2xl hover:text-white ease-in duration-100"></em
+          ></a>
+        </div>
       </div>
     </div>
-
     <div class="w-2/2 md:w-1/2">
       <TheForm />
     </div>
