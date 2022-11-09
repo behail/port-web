@@ -1,41 +1,36 @@
 <template>
-  <div class="z-20 side-menu">
-    <button
-      id="humbrder-btn"
-      v-show="!showSideBar"
-      @click="openSidebar()"
-      class="humbrder-icon text-3xl m-2 top-0"
-    >
-      &#9776;
-    </button>
-    <button
-      @click="closeSideBar()"
-      v-show="showSideBar"
-      class="x-button text-2xl mx-4 mt-1 top-2 font-bold"
-    >
-      X
-    </button>
+  <div class="z-20 side-menu" :class="{ humberger: !showSideBar }">
+    <nav class="menu mobileView">
+      <input
+        type="checkbox"
+        href="#"
+        class="menu-open"
+        name="menu-open"
+        id="menu-open"
+        @click="toggleSidebar()"
+      />
+      <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+      </label>
+    </nav>
     <div class="the-sidebar hidden md:block" id="side-bar">
-      <router-link to="/" @click="showSideBar ? closeSideBar() : null">
+      <router-link to="/" @click="toggleSidebar()">
         <em class="fa fa-home text-2xl md:text-3xl"></em>
         <span class="font-bold text-xs md:text-sm">Home</span>
       </router-link>
-      <router-link
-        to="/education"
-        class="sideBarText"
-        @click="showSideBar ? closeSideBar() : null"
-      >
+      <router-link to="/education" class="sideBarText" @click="toggleSidebar()">
         <i
           class="fa fa-graduation-cap text-xl md:text-2xl"
           aria-hidden="true"
         ></i>
         <span class="font-bold text-xs md:text-sm">Education</span></router-link
       >
-
       <router-link
         to="/experience"
         class="sideBarText"
-        @click="showSideBar ? closeSideBar() : null"
+        @click="toggleSidebar()"
       >
         <i class="fa fa-line-chart text-xl md:text-2xl" aria-hidden="true"></i>
         <span class="font-bold text-xs md:text-sm"
@@ -45,19 +40,14 @@
       <router-link
         to="/testimonials"
         class="sideBarText"
-        @click="showSideBar ? closeSideBar() : null"
+        @click="toggleSidebar()"
       >
         <i class="fa fa-user text-2xl md:text-3xl" aria-hidden="true"></i>
         <span class="font-bold text-xs md:text-sm"
           >Testimonials</span
         ></router-link
       >
-
-      <router-link
-        to="/contact"
-        class="sideBarText"
-        @click="showSideBar ? closeSideBar() : null"
-      >
+      <router-link to="/contact" class="sideBarText" @click="toggleSidebar()">
         <i class="fa fa-phone text-2xl md:text-3xl" aria-hidden="true"></i>
         <span class="font-bold text-xs md:text-sm">
           Contact Me</span
@@ -73,49 +63,127 @@ import { ref, defineComponent } from "vue";
 export default defineComponent({
   setup() {
     const showSideBar = ref<boolean>(false);
-    function openSidebar() {
-      const sideBar = document.getElementById("side-bar")!;
-      sideBar.style.display = "block";
-      showSideBar.value = true;
+    function toggleSidebar() {
+      showSideBar.value = !showSideBar.value;
+      console.log(showSideBar.value);
     }
-    function closeSideBar() {
-      const sideBar = document.getElementById("side-bar")!;
-      sideBar.style.display = "none";
-      showSideBar.value = false;
-    }
+
     return {
-      openSidebar,
       showSideBar,
-      closeSideBar,
+      toggleSidebar,
     };
   },
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+/* Humberger start */
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
 .active-route {
   border-radius: 4px;
   box-shadow: 1px 1px 5px 1px rgb(5, 237, 5);
 }
 .side-menu {
-  display: flex;
-  align-items: center;
+  position: fixed;
+  margin-top: 10px;
+
+  .menu {
+    position: absolute;
+    padding: 5vw 0px 0 0px;
+    z-index: 12;
+    .menu-open {
+      display: none;
+    }
+  }
 }
-.the-sidebar a:first-child {
-  animation: visibilityOn 1s ease;
+.menu-open {
+  &:checked + &-button .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+    width: 6vw;
+  }
+  &:checked + &-button .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+    visibility: hidden;
+  }
+  &:checked + &-button .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+    width: 6vw;
+  }
 }
-.the-sidebar a:nth-child(2) {
-  animation: visibilityOn 2s ease;
+.hamburger {
+  width: 6vw;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transition-duration: 600ms;
+  &-1 {
+    transform: translate3d(0, -8px, 0);
+    transition: 0.6s;
+  }
+  &-2 {
+    transform: translate3d(0, 0, 0);
+    width: 5vw;
+  }
+  &-3 {
+    transform: translate3d(0, 8px, 0);
+    width: 4vw;
+    transition: 0.6s;
+  }
 }
-.the-sidebar a:nth-child(3) {
-  animation: visibilityOn 3s ease;
+
+.the-sidebar {
+  margin: 0px 0 0 10px;
+  z-index: 11;
+  display: block;
+  a {
+    display: block;
+    padding: 7px;
+    position: relative;
+    &:hover span {
+      width: auto;
+      padding: 0 15px;
+      overflow: visible;
+      border-top-right-radius: 24px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  span {
+    z-index: 1;
+    color: #ffff;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 47px;
+    line-height: 38px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 0;
+    box-shadow: 0px 0px 7px #1e293b;
+    background-color: rgb(249 198 17);
+    font-weight: bold;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+  }
+  @for $i from 1 through 5 {
+    & a:nth-child(#{$i}) {
+      animation-name: visibilityOn;
+      animation-duration: $i * 0.5s;
+      animation-fill-mode: ease;
+    }
+  }
 }
-.the-sidebar a:nth-child(4) {
-  animation: visibilityOn 4s ease;
-}
-.the-sidebar a:nth-child(5) {
-  animation: visibilityOn 5s ease;
-}
+
 @keyframes visibilityOn {
   from {
     opacity: 0;
@@ -126,95 +194,40 @@ export default defineComponent({
     margin-top: 0px;
   }
 }
-.the-sidebar {
-  margin: 0px 0 0 10px;
-  z-index: 11;
-  display: block;
-}
-.the-sidebar a {
-  display: block;
-  padding: 7px;
-  position: relative;
+
+.mobileView {
+  visibility: hidden;
 }
 
-.the-sidebar span {
-  z-index: 1;
-  color: #ffff;
-  font-weight: 400;
-  text-transform: uppercase;
-  bottom: 0;
-  left: 47px;
-  line-height: 38px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 0;
-  box-shadow: 0px 0px 7px #1e293b;
-
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.humbrder-icon {
-  display: none;
-}
-.x-button {
-  display: none;
-}
-.the-sidebar a:hover span {
-  width: auto;
-  padding: 0 15px;
-  overflow: visible;
-  border-top-right-radius: 24px;
-}
-.the-sidebar a:hover {
-  text-decoration: none;
-}
-.the-sidebar a span {
-  background-color: rgb(249 198 17);
-  color: #fff;
-  font-weight: bold;
-}
-.humbrder-icon {
-  display: none;
-}
-@media screen and (max-width: 700px) {
-  .humbrder-icon {
-    display: block;
+@media screen and (max-width: 1024px) {
+  .side-menu {
+    transition: all 1s;
   }
-
+  .humberger {
+    background-color: rgb(7, 29, 60);
+    width: 100vw;
+    height: 40%;
+    position: absolute;
+    transition: all 1s ease;
+  }
+  .menu {
+    top: 0;
+  }
+  .mobileView {
+    visibility: visible;
+  }
   .the-sidebar {
+    display: inline-block;
     width: auto;
-    height: 100%;
-    position: fixed;
-    display: none;
-    flex-direction: column;
-    padding: 0;
-    padding-left: 1%;
-    margin: 0;
-  }
-  .the-sidebar a:hover span {
-    width: auto;
-    padding: 0 15px;
-    overflow: visible;
-    border-top-right-radius: 12px;
-  }
-
-  .humbrder-icon {
-    display: block;
+    margin: 25px 5px 20px 20px;
+    z-index: 11;
+    transition: 1s;
+    & a:hover span {
+      width: auto;
+      padding: 0 15px;
+      overflow: visible;
+      border-top-right-radius: 12px;
+    }
   }
 }
-
-/* @media screen and (max-width: 400px) {
-
-  .the-sidebar a {
-    text-align: center;
-    float: none;
-  }
-  .humbrder-icon{
-  display: block;
-}
-} */
 </style>
