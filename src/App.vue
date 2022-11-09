@@ -1,5 +1,5 @@
 <template>
-  <section class=" max-h-screen">
+  <section>
     <the-side-bar></the-side-bar>
     <div>
       <router-view v-slot="slotProps">
@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import TheSideBar from '@/views/SideBar/TheSidebar.vue';
+import { defineComponent } from "vue";
+import TheSideBar from "@/views/SideBar/TheSidebar.vue";
 
 export default defineComponent({
   components: { TheSideBar },
@@ -21,9 +21,8 @@ export default defineComponent({
 </script>
 <style>
 body {
-  background-color: #1E293B;
-  font-family: 'ABeeZee', serif;
-
+  background-color: #1e293b;
+  font-family: "ABeeZee", serif;
 }
 #app {
   -webkit-font-smoothing: antialiased;
@@ -34,20 +33,18 @@ body {
 section {
   display: flex;
 }
-.route-enter-active{
+.route-enter-active {
   animation: fadeIn 1s ease-in;
-
 }
-.route-leave-active{
+.route-leave-active {
   animation: moveUp 1s ease-out;
-
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
@@ -58,11 +55,10 @@ section {
     scale: 1;
     opacity: 1;
   }
-  to{
+  to {
     transform: translateY(-400px);
     scale: 0.5;
     opacity: 0;
   }
 }
-
 </style>
