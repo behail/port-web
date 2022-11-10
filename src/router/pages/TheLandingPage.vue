@@ -1,16 +1,14 @@
 <template>
-  <div
-    class="container justify-center align-middle justify-items-center h-screen"
-  >
-    <figure
-      class="lg:flex md:p-10 p-0 justify-center align-middle justify-items-center"
-    >
+  <div class="container h-screen">
+    <figure>
       <img
-        class="ml-6 p-2 md:p-12 md:w-37 md:h-30 rounded-full w-60 mx-auto mt-0"
+        class="avator p-2 md:p-6 md:w-37 md:h-30 rounded-full w-60 mx-auto"
         src="https://lh5.googleusercontent.com/ACRzPIluAc9Su2E5KeBThAlR8SXmzNoZ8dXpnu8H8yPCqsQXF8WOSUysfR5-qKQUQdY=w2400"
         alt=""
       />
-      <div class="p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4">
+      <div
+        class="message p-0 md:p-20 text-center md:text-left space-y-0 md:space-y-4"
+      >
         <blockquote class="p-0 mr-4 pt-0 md:pt-2 pb-10">
           <p class="text-lg font-medium text-white">HELLO! I'M</p>
           <p class="text-pinksh uppercase italic text-xl pb-4">
@@ -52,7 +50,7 @@
           :autoplay="4000"
           :itemsToShow="3"
           :wrap-around="true"
-          class="px-4 w-72 md:w-96 pt-12"
+          class="caresele px-4 w-72 md:w-96 pt-12"
         >
           <Slide class="p-2 pl-4" v-for="item in items" :key="item.title">
             <em
@@ -84,7 +82,7 @@
     </figure>
 
     <div
-      class="text-white flex flex-row justify-center items-center bottom-0 w-full mt-6 md:mt-0"
+      class="reach-me text-white flex flex-row justify-center items-center bottom-0 w-full mt-6 md:mt-0"
     >
       <p class="uppercase text-xs text-slate-500 italic">Reach out to me on</p>
       <a
@@ -153,19 +151,181 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.container {
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
+<style scoped lang="scss">
+@media only screen and (max-width: 400px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .avator {
+      margin: auto;
+      margin-top: 30%;
+      margin-left: 20%;
+      box-shadow: 1px 1px 15px 1px rgba(5, 237, 5, 0.6);
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      margin: 10% 2%;
+      .caresele {
+        margin: 0%;
+      }
+    }
+    .reach-me {
+      padding-bottom: 20px;
+    }
+  }
 }
-iframe {
-  height: 66vh;
+/* Extra small devices (phones, 400px and above) */
+@media only screen and (min-width: 400px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .avator {
+      margin: auto;
+      margin-top: 10%;
+      margin-left: 25%;
+      box-shadow: 1px 1px 15px 1px rgba(5, 237, 5, 0.6);
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      margin: 10%;
+    }
+    .reach-me {
+      padding-bottom: 20px;
+    }
+  }
 }
 
-@media (max-width: 768px) {
-  iframe {
-    height: 63vh;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .avator {
+      margin: auto;
+      margin-top: 10%;
+      margin-left: 25%;
+      box-shadow: 1px 1px 15px 1px rgba(5, 237, 5, 0.6);
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      margin: 10%;
+    }
+    .reach-me {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .avator {
+      margin: auto;
+      margin: 0;
+      margin-top: 30%;
+      margin-left: 15%;
+      width: 65vw;
+      height: auto;
+      box-shadow: 1px 1px 15px 1px rgba(5, 237, 5, 0.6);
+    }
+    .message {
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+
+      flex-direction: column;
+      margin: 0%;
+    }
+    .reach-me {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and <1200px) */
+// @media only screen and (min-width: 992px) {
+//   .container {
+//     width: 100vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     figure {
+//       margin: auto;
+//       display: flex;
+//       justify-content: center;
+//       justify-items: center;
+//       align-items: center;
+//       align-content: center;
+//     }
+//     .avator {
+//       margin: 0;
+//       animation: brightShadow 1s infinite ease-in reverse;
+//     }
+//     .message {
+//       margin: 0;
+//       display: flex;
+//       justify-items: center;
+//     }
+//   }
+
+//   iframe {
+//     margin: auto;
+//   }
+// }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+//   .container {
+//     width: 100vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     figure {
+//       margin: auto;
+//       display: flex;
+//       justify-content: center;
+//       justify-items: center;
+//       align-items: center;
+//       align-content: center;
+//       flex-direction: column;
+//     }
+//     .avator {
+//       margin: 0;
+//       animation: brightShadow 1s infinite ease-in reverse;
+//     }
+//     .message {
+//       margin: 0;
+//       display: flex;
+//       justify-items: center;
+//     }
+//   }
+
+//   iframe {
+//     margin: auto;
+//   }
+// }
+@keyframes brightShadow {
+  from {
+    box-shadow: 1px 1px 20px 1px rgba(5, 237, 5, 0.2);
+  }
+  to {
+    box-shadow: 1px 1px 20px 1px rgba(5, 237, 5, 0.3);
   }
 }
 </style>
